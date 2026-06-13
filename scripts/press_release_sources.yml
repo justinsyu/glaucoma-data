@@ -9,7 +9,7 @@ companies:
       - source_id: alcon-media-releases
         url: https://www.alcon.com/media-releases
         fetcher: requests
-        title_filter: '(?i)Rhopressa|Rocklatan|netarsudil|glaucoma|ocular hypertension'
+        title_filter: '(?i)Rhopressa|Rocklatan|Hydrus|AR-17043|PG043|PG324|netarsudil|glaucoma|ocular hypertension'
 
   - id: abbvie_allergan
     company_slug: abbvie-allergan
@@ -19,7 +19,7 @@ companies:
       - source_id: abbvie-news
         url: https://news.abbvie.com/
         fetcher: requests
-        title_filter: '(?i)Durysta|bimatoprost|glaucoma|ocular hypertension'
+        title_filter: '(?i)Durysta|XEN|AGN-193408|bimatoprost|glaucoma|ocular hypertension'
 
   - id: glaukos
     company_slug: glaukos
@@ -29,7 +29,7 @@ companies:
       - source_id: glaukos-investor-news
         url: https://investors.glaukos.com/news/
         fetcher: requests
-        title_filter: '(?i)iDose|travoprost|glaucoma|ocular hypertension'
+        title_filter: '(?i)iDose|iStent|GLK-102|GLK-311|iLution|travoprost|glaucoma|ocular hypertension'
 
   - id: santen_ube
     company_slug: santen-ube
@@ -39,7 +39,7 @@ companies:
       - source_id: santen-news
         url: https://www.santen.com/en/news/
         fetcher: requests
-        title_filter: '(?i)Omlonti|omidenepag|glaucoma|ocular hypertension'
+        title_filter: '(?i)Omlonti|omidenepag|Sepetaprost|Setaneo|STN1012600|STN1013900|netarsudil|glaucoma|ocular hypertension'
 
   - id: bausch_lomb_nicox
     company_slug: bausch-lomb-nicox
@@ -49,7 +49,7 @@ companies:
       - source_id: nicox-press-archive
         url: https://www.nicox.com/news-and-events/press-releases-archive/
         fetcher: requests
-        title_filter: '(?i)Vyzulta|latanoprostene|glaucoma|ocular hypertension'
+        title_filter: '(?i)Vyzulta|latanoprostene|BL1107|WB007|Whitecap|glaucoma|ocular hypertension'
 
   - id: sun_pharma_sparc
     company_slug: sun-pharma-sparc
@@ -69,7 +69,7 @@ companies:
       - source_id: thea-news
         url: https://theapharmainc.com/news/
         fetcher: requests
-        title_filter: '(?i)Iyuzeh|latanoprost|glaucoma|ocular hypertension'
+        title_filter: '(?i)Iyuzeh|T4090|kinezodianone|latanoprost|glaucoma|ocular hypertension'
 
   - id: nicox
     company_slug: nicox
@@ -110,3 +110,63 @@ companies:
         url: https://perfusetherapeutics.com/news/
         fetcher: requests
         title_filter: '(?i)PER-001|Perfuse|Bayer|endothelin|glaucoma'
+
+  - id: polyactiva
+    company_slug: polyactiva
+    name: "PolyActiva"
+    tier: 1
+    sources:
+      - source_id: polyactiva-pipeline
+        url: https://polyactiva.com/pipeline/
+        fetcher: requests
+        title_filter: '(?i)PA5108|PA5346|latanoprost|glaucoma|ocular hypertension'
+
+  - id: ocular_therapeutix
+    company_slug: ocular-therapeutix
+    name: "Ocular Therapeutix"
+    tier: 1
+    sources:
+      - source_id: ocular-otx-tic
+        url: https://www.ocutx.com/pipeline/otx-tic/
+        fetcher: requests
+        title_filter: '(?i)OTX-TIC|travoprost|glaucoma|ocular hypertension'
+
+  - id: sight_sciences
+    company_slug: sight-sciences
+    name: "Sight Sciences"
+    tier: 1
+    sources:
+      - source_id: sight-sciences-omni
+        url: https://www.sightsciences.com/us/omni-surgical-system/
+        fetcher: requests
+        title_filter: '(?i)OMNI|glaucoma|primary open-angle glaucoma'
+
+  - id: new_world_medical
+    company_slug: new-world-medical
+    name: "New World Medical"
+    tier: 1
+    sources:
+      - source_id: new-world-medical-site
+        url: https://www.newworldmedical.com/
+        fetcher: requests
+        title_filter: '(?i)KDB|STREAMLINE|glaucoma|primary open-angle glaucoma'
+
+  - id: mediprint_ophthalmics
+    company_slug: mediprint-ophthalmics
+    name: "MediPrint Ophthalmics"
+    tier: 1
+    sources:
+      - source_id: mediprint-news
+        url: https://mediprintlens.com/
+        fetcher: requests
+        title_filter: '(?i)LL-BMT1|SIGHT-2|bimatoprost|contact lens|glaucoma|ocular hypertension'
+
+  - id: skye_bioscience
+    company_slug: skye-bioscience
+    name: "Skye Bioscience"
+    tier: 1
+    sources:
+      - source_id: skye-news
+        url: https://ir.skyebioscience.com/news-releases
+        fetcher: requests
+        title_filter: '(?i)SBI-100|glaucoma|ocular hypertension'

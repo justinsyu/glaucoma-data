@@ -1,11 +1,11 @@
 {
   "summary": {
-    "monitored_sources": 9,
-    "tracked_trials": 9,
-    "updates_total": 9,
+    "monitored_sources": 34,
+    "tracked_trials": 34,
+    "updates_total": 34,
     "updates_last_7_days": 0,
     "most_recent_registry_update_date": "2026-06-11",
-    "latest_capture_at": "2026-06-13T05:34:25Z"
+    "latest_capture_at": "2026-06-13T06:18:21Z"
   },
   "most_recent_registry_updates": {
     "date": "2026-06-11",
@@ -38,6 +38,81 @@
   },
   "weekly_buckets": [],
   "updates": [
+    {
+      "detected_date": "2025-11-18",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Alcon",
+      "program": "AR-17043 / PG043",
+      "nct_id": "NCT06441643",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06441643",
+      "trial_title": "Next Generation Rocklatan",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2024-09-04"
+        },
+        {
+          "label": "Completion",
+          "value": "2025-11-14"
+        }
+      ],
+      "last_update_post_date": "2025-11-18"
+    },
+    {
+      "detected_date": "2026-04-21",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Alcon",
+      "program": "Reformulated PG324",
+      "nct_id": "NCT07082816",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07082816",
+      "trial_title": "Reformulated PG324 Ophthalmic Solution for Intraocular Pressure Reduction",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2025-09-02"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-04-06"
+        }
+      ],
+      "last_update_post_date": "2026-04-21"
+    },
+    {
+      "detected_date": "2026-05-22",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "AbbVie / Allergan",
+      "program": "AGN-193408 SR",
+      "nct_id": "NCT04499248",
+      "trial_url": "https://clinicaltrials.gov/study/NCT04499248",
+      "trial_title": "AGN-193408 SR in the Treatment of Open-angle Glaucoma or Ocular Hypertension",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE1, PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2020-11-16"
+        },
+        {
+          "label": "Completion",
+          "value": "2029-04"
+        }
+      ],
+      "last_update_post_date": "2026-05-22"
+    },
     {
       "detected_date": "2025-06-24",
       "event_type": "checked_ok",
@@ -84,6 +159,56 @@
         {
           "label": "Completion",
           "value": "2025-06-25"
+        }
+      ],
+      "last_update_post_date": "2025-09-08"
+    },
+    {
+      "detected_date": "2023-06-18",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Nicox",
+      "program": "NCX 470",
+      "nct_id": "NCT03657797",
+      "trial_url": "https://clinicaltrials.gov/study/NCT03657797",
+      "trial_title": "Phase 2 Dose-Response Study Evaluating the Safety and Efficacy of NCX 470 vs Latanoprost in Subjects With Open-Angle Glaucoma or Ocular Hypertension",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2018-08-01"
+        },
+        {
+          "label": "Completion",
+          "value": "2019-08-23"
+        }
+      ],
+      "last_update_post_date": "2023-06-18"
+    },
+    {
+      "detected_date": "2025-09-08",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Nicox",
+      "program": "NCX 470",
+      "nct_id": "NCT05938699",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05938699",
+      "trial_title": "Aqueous Humor Dynamics of NCX 470 Ophthalmic Solution",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2, PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2023-12-12"
+        },
+        {
+          "label": "Completion",
+          "value": "2025-03-17"
         }
       ],
       "last_update_post_date": "2025-09-08"
@@ -164,6 +289,256 @@
       "last_update_post_date": "2026-04-03"
     },
     {
+      "detected_date": "2026-02-24",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Qlaris Bio",
+      "program": "QLS-111",
+      "nct_id": "NCT07354477",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07354477",
+      "trial_title": "Single-site Pilot Study Evaluating the Effect of QLS-111 Ophthalmic Solution on Posterior Perfusion and Vessel Dilation",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2026-02-20"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-06"
+        }
+      ],
+      "last_update_post_date": "2026-02-24"
+    },
+    {
+      "detected_date": "2026-04-03",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Qlaris Bio",
+      "program": "QLS-111-FDC",
+      "nct_id": "NCT07354516",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07354516",
+      "trial_title": "Study of QLS-111-FDC in Open-Angle Glaucoma or Ocular Hypertension",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2, PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2026-03-18"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-07-15"
+        }
+      ],
+      "last_update_post_date": "2026-04-03"
+    },
+    {
+      "detected_date": "2026-03-02",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Glaukos",
+      "program": "iDose TREX / GLK-102",
+      "nct_id": "NCT07075718",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07075718",
+      "trial_title": "Phase 2/Phase 3 Trial to Evaluate the Safety and Efficacy of the Second Generation Travoprost Intracameral Implant",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2, PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2025-06-12"
+        },
+        {
+          "label": "Completion",
+          "value": "2032-03"
+        }
+      ],
+      "last_update_post_date": "2026-03-02"
+    },
+    {
+      "detected_date": "2026-03-30",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Glaukos",
+      "program": "iDose TREX / GLK-102",
+      "nct_id": "NCT07495852",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07495852",
+      "trial_title": "Trial to Evaluate the Safety and Efficacy of the Second Generation Travoprost Intracameral Implant",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2026-02-17"
+        },
+        {
+          "label": "Completion",
+          "value": "2032-03"
+        }
+      ],
+      "last_update_post_date": "2026-03-30"
+    },
+    {
+      "detected_date": "2025-06-13",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "PolyActiva",
+      "program": "PA5108",
+      "nct_id": "NCT06964191",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06964191",
+      "trial_title": "Evaluate Efficacy and Safety of PA5108 Ocular Implants in Primary Open Angle Glaucoma or Ocular Hypertension",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2025-05-31"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-11-15"
+        }
+      ],
+      "last_update_post_date": "2025-06-13"
+    },
+    {
+      "detected_date": "2026-04-28",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "PolyActiva",
+      "program": "PA5346",
+      "nct_id": "NCT06964061",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06964061",
+      "trial_title": "Evaluate Efficacy, Safety, Tolerability and Biodegradation of PA5346 Ocular Implant in Patients With Open-Angle Glaucoma or Ocular Hypertension",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE1"
+        },
+        {
+          "label": "Start",
+          "value": "2025-06-10"
+        },
+        {
+          "label": "Completion",
+          "value": "2027-04-15"
+        }
+      ],
+      "last_update_post_date": "2026-04-28"
+    },
+    {
+      "detected_date": "2025-03-21",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Ocular Therapeutix",
+      "program": "OTX-TIC",
+      "nct_id": "NCT05335122",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05335122",
+      "trial_title": "A Study to Evaluate the Efficacy and Safety of OTX-TIC (Travoprost) Intracameral Implant for Patients With Open-angle Glaucoma (OAG) or Ocular Hypertension (OHT)",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2022-03-16"
+        },
+        {
+          "label": "Completion",
+          "value": "2025-01-24"
+        }
+      ],
+      "last_update_post_date": "2025-03-21"
+    },
+    {
+      "detected_date": "2026-05-07",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Bausch + Lomb / Nicox",
+      "program": "BL1107 / WB007",
+      "nct_id": "NCT07168902",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07168902",
+      "trial_title": "Phase 2 Study of BL1107 Eye Drops vs. Timolol in Adults With Primary Open Angle Glaucoma or Ocular Hypertension",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2025-10-24"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-05"
+        }
+      ],
+      "last_update_post_date": "2026-05-07"
+    },
+    {
+      "detected_date": "2026-01-02",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Thea Pharma",
+      "program": "T4090 / Kinezodianone R HCl",
+      "nct_id": "NCT06394973",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06394973",
+      "trial_title": "Efficacy and Safety Assessment of T4090 Ophthalmic Solution Versus Rhopressa\u00ae Ophthalmic Solution in Patients With Open-angle Glaucoma or Ocular Hypertension",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2024-08-05"
+        },
+        {
+          "label": "Completion",
+          "value": "2024-11-21"
+        }
+      ],
+      "last_update_post_date": "2026-01-02"
+    },
+    {
+      "detected_date": "2024-02-07",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Thea Pharma",
+      "program": "T4090 / Kinezodianone R HCl",
+      "nct_id": "NCT05389267",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05389267",
+      "trial_title": "Safety Assessment of T4090 Eye Drops in Ocular Hypertensive or Glaucomatous Patients.",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE1, PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2022-07-05"
+        },
+        {
+          "label": "Completion",
+          "value": "2024-12-31"
+        }
+      ],
+      "last_update_post_date": "2024-02-07"
+    },
+    {
       "detected_date": "2026-06-05",
       "event_type": "checked_ok",
       "event_type_label": "Registry row",
@@ -187,6 +562,81 @@
         }
       ],
       "last_update_post_date": "2026-06-05"
+    },
+    {
+      "detected_date": "2025-08-22",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "SpyGlass Pharma",
+      "program": "BIM-IOL System",
+      "nct_id": "NCT06120842",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06120842",
+      "trial_title": "Evaluation of the Bimatoprost Implant System Used in Combination With the SpyGlass Intraocular Lens Compared to Timolol Ophthalmic Solution",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE1, PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2023-10-13"
+        },
+        {
+          "label": "Completion",
+          "value": "2027-11"
+        }
+      ],
+      "last_update_post_date": "2025-08-22"
+    },
+    {
+      "detected_date": "2025-09-04",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "SpyGlass Pharma",
+      "program": "BIM-IOL System",
+      "nct_id": "NCT07154797",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07154797",
+      "trial_title": "Evaluation of the Safety and Effectiveness of the Bimatoprost Implant System / IOL Combination in Patients With Ocular Hypertension or Mild to Moderate Open-angle Glaucoma",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "NA"
+        },
+        {
+          "label": "Start",
+          "value": "2022-04-21"
+        },
+        {
+          "label": "Completion",
+          "value": "2022-12-13"
+        }
+      ],
+      "last_update_post_date": "2025-09-04"
+    },
+    {
+      "detected_date": "2025-09-04",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "SpyGlass Pharma",
+      "program": "BIM-IOL System",
+      "nct_id": "NCT07154810",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07154810",
+      "trial_title": "Observational Study to Evaluate Long Term Outcomes for Ocular Hypertension and Glaucoma Patients Treated With the SpyGlass Bimatoprost Implant System / IOL Combination",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "Not specified"
+        },
+        {
+          "label": "Start",
+          "value": "2023-03-16"
+        },
+        {
+          "label": "Completion",
+          "value": "2031-04-14"
+        }
+      ],
+      "last_update_post_date": "2025-09-04"
     },
     {
       "detected_date": "2025-10-20",
@@ -262,9 +712,256 @@
         }
       ],
       "last_update_post_date": "2026-06-11"
+    },
+    {
+      "detected_date": "2022-06-08",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "MediPrint Ophthalmics",
+      "program": "LL-BMT1",
+      "nct_id": "NCT04747808",
+      "trial_url": "https://clinicaltrials.gov/study/NCT04747808",
+      "trial_title": "Study of LL-BMT1 in Patients With Elevated Intraocular Pressure",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2021-01-08"
+        },
+        {
+          "label": "Completion",
+          "value": "2021-02-16"
+        }
+      ],
+      "last_update_post_date": "2022-06-08"
+    },
+    {
+      "detected_date": "2025-11-04",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Neurotech / Stanford",
+      "program": "NT-501 CNTF",
+      "nct_id": "NCT04577300",
+      "trial_url": "https://clinicaltrials.gov/study/NCT04577300",
+      "trial_title": "Dual Intravitreal Implantation of NT-501 Encapsulated Cell Therapy for Glaucoma",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2021-05-15"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-08-15"
+        }
+      ],
+      "last_update_post_date": "2025-11-04"
+    },
+    {
+      "detected_date": "2025-11-04",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Neurotech / Stanford",
+      "program": "NT-501 CNTF",
+      "nct_id": "NCT02862938",
+      "trial_url": "https://clinicaltrials.gov/study/NCT02862938",
+      "trial_title": "Study of NT-501 Encapsulated Cell Therapy for Glaucoma Neuroprotection and Vision Restoration",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2016-06"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-08-15"
+        }
+      ],
+      "last_update_post_date": "2025-11-04"
+    },
+    {
+      "detected_date": "2025-11-12",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Neurotech / Stanford",
+      "program": "Nicotinamide / Pyruvate",
+      "nct_id": "NCT05695027",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05695027",
+      "trial_title": "Nicotinamide and Pyruvate for Open Angle Glaucoma: A Randomized Clinical Study",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2, PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2023-03-14"
+        },
+        {
+          "label": "Completion",
+          "value": "2028-01"
+        }
+      ],
+      "last_update_post_date": "2025-11-12"
+    },
+    {
+      "detected_date": "2024-05-09",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Neurotech / Stanford",
+      "program": "Nicotinamide / Pyruvate",
+      "nct_id": "NCT05405868",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05405868",
+      "trial_title": "Nicotinamide in Glaucoma (NAMinG): A Randomised, Placebo-controlled, Multi-centre, Phase III Trial",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2024-01-18"
+        },
+        {
+          "label": "Completion",
+          "value": "2027-06-30"
+        }
+      ],
+      "last_update_post_date": "2024-05-09"
+    },
+    {
+      "detected_date": "2026-01-14",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Skye Bioscience",
+      "program": "SBI-100 OE",
+      "nct_id": "NCT06144918",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06144918",
+      "trial_title": "Ph2 Placebo-Controlled Study for Safety & Ocular Efficacy of SBI-100 Ophthalmic Emulsion in Pts w/ Elevated Eye Pressure",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2023-11-09"
+        },
+        {
+          "label": "Completion",
+          "value": "2024-02-22"
+        }
+      ],
+      "last_update_post_date": "2026-01-14"
+    },
+    {
+      "detected_date": "2026-06-01",
+      "event_type": "checked_ok",
+      "event_type_label": "Registry row",
+      "company": "Ache Laboratorios",
+      "program": "DNN.31.19.026",
+      "nct_id": "NCT07617532",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07617532",
+      "trial_title": "Efficacy and Safety of DNN.31.19.026 for Ocular Hypertension or Primary Open-Angle Glaucoma",
+      "changed_fields": [
+        {
+          "label": "Phase",
+          "value": "PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2026-06"
+        },
+        {
+          "label": "Completion",
+          "value": "2028-03"
+        }
+      ],
+      "last_update_post_date": "2026-06-01"
     }
   ],
   "latest_trials": [
+    {
+      "company": "Alcon",
+      "program": "AR-17043 / PG043",
+      "nct_id": "NCT06441643",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06441643",
+      "overall_status": "COMPLETED",
+      "has_results": false,
+      "last_update_post_date": "2025-11-18",
+      "trial_title": "Next Generation Rocklatan",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2024-09-04"
+        },
+        {
+          "label": "Completion",
+          "value": "2025-11-14"
+        }
+      ]
+    },
+    {
+      "company": "Alcon",
+      "program": "Reformulated PG324",
+      "nct_id": "NCT07082816",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07082816",
+      "overall_status": "COMPLETED",
+      "has_results": false,
+      "last_update_post_date": "2026-04-21",
+      "trial_title": "Reformulated PG324 Ophthalmic Solution for Intraocular Pressure Reduction",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2025-09-02"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-04-06"
+        }
+      ]
+    },
+    {
+      "company": "AbbVie / Allergan",
+      "program": "AGN-193408 SR",
+      "nct_id": "NCT04499248",
+      "trial_url": "https://clinicaltrials.gov/study/NCT04499248",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2026-05-22",
+      "trial_title": "AGN-193408 SR in the Treatment of Open-angle Glaucoma or Ocular Hypertension",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE1, PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2020-11-16"
+        },
+        {
+          "label": "Completion",
+          "value": "2029-04"
+        }
+      ]
+    },
     {
       "company": "Nicox",
       "program": "NCX 470",
@@ -310,6 +1007,54 @@
         {
           "label": "Completion",
           "value": "2025-06-25"
+        }
+      ]
+    },
+    {
+      "company": "Nicox",
+      "program": "NCX 470",
+      "nct_id": "NCT03657797",
+      "trial_url": "https://clinicaltrials.gov/study/NCT03657797",
+      "overall_status": "COMPLETED",
+      "has_results": true,
+      "last_update_post_date": "2023-06-18",
+      "trial_title": "Phase 2 Dose-Response Study Evaluating the Safety and Efficacy of NCX 470 vs Latanoprost in Subjects With Open-Angle Glaucoma or Ocular Hypertension",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2018-08-01"
+        },
+        {
+          "label": "Completion",
+          "value": "2019-08-23"
+        }
+      ]
+    },
+    {
+      "company": "Nicox",
+      "program": "NCX 470",
+      "nct_id": "NCT05938699",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05938699",
+      "overall_status": "COMPLETED",
+      "has_results": false,
+      "last_update_post_date": "2025-09-08",
+      "trial_title": "Aqueous Humor Dynamics of NCX 470 Ophthalmic Solution",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2, PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2023-12-12"
+        },
+        {
+          "label": "Completion",
+          "value": "2025-03-17"
         }
       ]
     },
@@ -386,6 +1131,246 @@
       ]
     },
     {
+      "company": "Qlaris Bio",
+      "program": "QLS-111",
+      "nct_id": "NCT07354477",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07354477",
+      "overall_status": "RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2026-02-24",
+      "trial_title": "Single-site Pilot Study Evaluating the Effect of QLS-111 Ophthalmic Solution on Posterior Perfusion and Vessel Dilation",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2026-02-20"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-06"
+        }
+      ]
+    },
+    {
+      "company": "Qlaris Bio",
+      "program": "QLS-111-FDC",
+      "nct_id": "NCT07354516",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07354516",
+      "overall_status": "RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2026-04-03",
+      "trial_title": "Study of QLS-111-FDC in Open-Angle Glaucoma or Ocular Hypertension",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2, PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2026-03-18"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "company": "Glaukos",
+      "program": "iDose TREX / GLK-102",
+      "nct_id": "NCT07075718",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07075718",
+      "overall_status": "RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2026-03-02",
+      "trial_title": "Phase 2/Phase 3 Trial to Evaluate the Safety and Efficacy of the Second Generation Travoprost Intracameral Implant",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2, PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2025-06-12"
+        },
+        {
+          "label": "Completion",
+          "value": "2032-03"
+        }
+      ]
+    },
+    {
+      "company": "Glaukos",
+      "program": "iDose TREX / GLK-102",
+      "nct_id": "NCT07495852",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07495852",
+      "overall_status": "RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2026-03-30",
+      "trial_title": "Trial to Evaluate the Safety and Efficacy of the Second Generation Travoprost Intracameral Implant",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2026-02-17"
+        },
+        {
+          "label": "Completion",
+          "value": "2032-03"
+        }
+      ]
+    },
+    {
+      "company": "PolyActiva",
+      "program": "PA5108",
+      "nct_id": "NCT06964191",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06964191",
+      "overall_status": "RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2025-06-13",
+      "trial_title": "Evaluate Efficacy and Safety of PA5108 Ocular Implants in Primary Open Angle Glaucoma or Ocular Hypertension",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2025-05-31"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "company": "PolyActiva",
+      "program": "PA5346",
+      "nct_id": "NCT06964061",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06964061",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2026-04-28",
+      "trial_title": "Evaluate Efficacy, Safety, Tolerability and Biodegradation of PA5346 Ocular Implant in Patients With Open-Angle Glaucoma or Ocular Hypertension",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE1"
+        },
+        {
+          "label": "Start",
+          "value": "2025-06-10"
+        },
+        {
+          "label": "Completion",
+          "value": "2027-04-15"
+        }
+      ]
+    },
+    {
+      "company": "Ocular Therapeutix",
+      "program": "OTX-TIC",
+      "nct_id": "NCT05335122",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05335122",
+      "overall_status": "COMPLETED",
+      "has_results": false,
+      "last_update_post_date": "2025-03-21",
+      "trial_title": "A Study to Evaluate the Efficacy and Safety of OTX-TIC (Travoprost) Intracameral Implant for Patients With Open-angle Glaucoma (OAG) or Ocular Hypertension (OHT)",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2022-03-16"
+        },
+        {
+          "label": "Completion",
+          "value": "2025-01-24"
+        }
+      ]
+    },
+    {
+      "company": "Bausch + Lomb / Nicox",
+      "program": "BL1107 / WB007",
+      "nct_id": "NCT07168902",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07168902",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2026-05-07",
+      "trial_title": "Phase 2 Study of BL1107 Eye Drops vs. Timolol in Adults With Primary Open Angle Glaucoma or Ocular Hypertension",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2025-10-24"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-05"
+        }
+      ]
+    },
+    {
+      "company": "Thea Pharma",
+      "program": "T4090 / Kinezodianone R HCl",
+      "nct_id": "NCT06394973",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06394973",
+      "overall_status": "COMPLETED",
+      "has_results": true,
+      "last_update_post_date": "2026-01-02",
+      "trial_title": "Efficacy and Safety Assessment of T4090 Ophthalmic Solution Versus Rhopressa\u00ae Ophthalmic Solution in Patients With Open-angle Glaucoma or Ocular Hypertension",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2024-08-05"
+        },
+        {
+          "label": "Completion",
+          "value": "2024-11-21"
+        }
+      ]
+    },
+    {
+      "company": "Thea Pharma",
+      "program": "T4090 / Kinezodianone R HCl",
+      "nct_id": "NCT05389267",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05389267",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2024-02-07",
+      "trial_title": "Safety Assessment of T4090 Eye Drops in Ocular Hypertensive or Glaucomatous Patients.",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE1, PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2022-07-05"
+        },
+        {
+          "label": "Completion",
+          "value": "2024-12-31"
+        }
+      ]
+    },
+    {
       "company": "Bayer / Perfuse Therapeutics",
       "program": "PER-001",
       "nct_id": "NCT05822245",
@@ -406,6 +1391,78 @@
         {
           "label": "Completion",
           "value": "2025-04-20"
+        }
+      ]
+    },
+    {
+      "company": "SpyGlass Pharma",
+      "program": "BIM-IOL System",
+      "nct_id": "NCT06120842",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06120842",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2025-08-22",
+      "trial_title": "Evaluation of the Bimatoprost Implant System Used in Combination With the SpyGlass Intraocular Lens Compared to Timolol Ophthalmic Solution",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE1, PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2023-10-13"
+        },
+        {
+          "label": "Completion",
+          "value": "2027-11"
+        }
+      ]
+    },
+    {
+      "company": "SpyGlass Pharma",
+      "program": "BIM-IOL System",
+      "nct_id": "NCT07154797",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07154797",
+      "overall_status": "COMPLETED",
+      "has_results": false,
+      "last_update_post_date": "2025-09-04",
+      "trial_title": "Evaluation of the Safety and Effectiveness of the Bimatoprost Implant System / IOL Combination in Patients With Ocular Hypertension or Mild to Moderate Open-angle Glaucoma",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "NA"
+        },
+        {
+          "label": "Start",
+          "value": "2022-04-21"
+        },
+        {
+          "label": "Completion",
+          "value": "2022-12-13"
+        }
+      ]
+    },
+    {
+      "company": "SpyGlass Pharma",
+      "program": "BIM-IOL System",
+      "nct_id": "NCT07154810",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07154810",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2025-09-04",
+      "trial_title": "Observational Study to Evaluate Long Term Outcomes for Ocular Hypertension and Glaucoma Patients Treated With the SpyGlass Bimatoprost Implant System / IOL Combination",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "Not specified"
+        },
+        {
+          "label": "Start",
+          "value": "2023-03-16"
+        },
+        {
+          "label": "Completion",
+          "value": "2031-04-14"
         }
       ]
     },
@@ -478,6 +1535,174 @@
         {
           "label": "Completion",
           "value": "2030-03-31"
+        }
+      ]
+    },
+    {
+      "company": "MediPrint Ophthalmics",
+      "program": "LL-BMT1",
+      "nct_id": "NCT04747808",
+      "trial_url": "https://clinicaltrials.gov/study/NCT04747808",
+      "overall_status": "COMPLETED",
+      "has_results": true,
+      "last_update_post_date": "2022-06-08",
+      "trial_title": "Study of LL-BMT1 in Patients With Elevated Intraocular Pressure",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2021-01-08"
+        },
+        {
+          "label": "Completion",
+          "value": "2021-02-16"
+        }
+      ]
+    },
+    {
+      "company": "Neurotech / Stanford",
+      "program": "NT-501 CNTF",
+      "nct_id": "NCT04577300",
+      "trial_url": "https://clinicaltrials.gov/study/NCT04577300",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2025-11-04",
+      "trial_title": "Dual Intravitreal Implantation of NT-501 Encapsulated Cell Therapy for Glaucoma",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2021-05-15"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-08-15"
+        }
+      ]
+    },
+    {
+      "company": "Neurotech / Stanford",
+      "program": "NT-501 CNTF",
+      "nct_id": "NCT02862938",
+      "trial_url": "https://clinicaltrials.gov/study/NCT02862938",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2025-11-04",
+      "trial_title": "Study of NT-501 Encapsulated Cell Therapy for Glaucoma Neuroprotection and Vision Restoration",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2016-06"
+        },
+        {
+          "label": "Completion",
+          "value": "2026-08-15"
+        }
+      ]
+    },
+    {
+      "company": "Neurotech / Stanford",
+      "program": "Nicotinamide / Pyruvate",
+      "nct_id": "NCT05695027",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05695027",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2025-11-12",
+      "trial_title": "Nicotinamide and Pyruvate for Open Angle Glaucoma: A Randomized Clinical Study",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2, PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2023-03-14"
+        },
+        {
+          "label": "Completion",
+          "value": "2028-01"
+        }
+      ]
+    },
+    {
+      "company": "Neurotech / Stanford",
+      "program": "Nicotinamide / Pyruvate",
+      "nct_id": "NCT05405868",
+      "trial_url": "https://clinicaltrials.gov/study/NCT05405868",
+      "overall_status": "RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2024-05-09",
+      "trial_title": "Nicotinamide in Glaucoma (NAMinG): A Randomised, Placebo-controlled, Multi-centre, Phase III Trial",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2024-01-18"
+        },
+        {
+          "label": "Completion",
+          "value": "2027-06-30"
+        }
+      ]
+    },
+    {
+      "company": "Skye Bioscience",
+      "program": "SBI-100 OE",
+      "nct_id": "NCT06144918",
+      "trial_url": "https://clinicaltrials.gov/study/NCT06144918",
+      "overall_status": "COMPLETED",
+      "has_results": true,
+      "last_update_post_date": "2026-01-14",
+      "trial_title": "Ph2 Placebo-Controlled Study for Safety & Ocular Efficacy of SBI-100 Ophthalmic Emulsion in Pts w/ Elevated Eye Pressure",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE2"
+        },
+        {
+          "label": "Start",
+          "value": "2023-11-09"
+        },
+        {
+          "label": "Completion",
+          "value": "2024-02-22"
+        }
+      ]
+    },
+    {
+      "company": "Ache Laboratorios",
+      "program": "DNN.31.19.026",
+      "nct_id": "NCT07617532",
+      "trial_url": "https://clinicaltrials.gov/study/NCT07617532",
+      "overall_status": "NOT_YET_RECRUITING",
+      "has_results": false,
+      "last_update_post_date": "2026-06-01",
+      "trial_title": "Efficacy and Safety of DNN.31.19.026 for Ocular Hypertension or Primary Open-Angle Glaucoma",
+      "update_details": [
+        {
+          "label": "Phase",
+          "value": "PHASE3"
+        },
+        {
+          "label": "Start",
+          "value": "2026-06"
+        },
+        {
+          "label": "Completion",
+          "value": "2028-03"
         }
       ]
     }

@@ -11,6 +11,17 @@
     "source_url": "https://www.bayer.com/en/us/news-stories/perfuse-therapeutics"
   },
   {
+    "title": "iDose TREX / GLK-102 Phase 2/3 trial overview",
+    "date": "2026-03-30",
+    "company": "Glaukos",
+    "company_slug": "glaukos",
+    "program": "iDose TREX / GLK-102",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for Glaukos Gen 2 travoprost intracameral implant development.",
+    "source_url": "https://clinicaltrials.gov/study/NCT07075718"
+  },
+  {
     "title": "NCX 470 AGS 2026 Phase 3 data summary",
     "date": "2026-03-30",
     "company": "Nicox",
@@ -20,6 +31,17 @@
     "indication": "Open-angle glaucoma / ocular hypertension",
     "summary": "Nicox source summarizing NCX 470 Phase 3 data presented at the 2026 American Glaucoma Society annual meeting.",
     "source_url": "https://www.nicox.com/wp-content/uploads/EN_AGS-2026-posters-presented_FINAL.pdf"
+  },
+  {
+    "title": "QLS-111-FDC Phase 2/3 trial overview",
+    "date": "2026-03-30",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111-FDC",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for QLS-111 fixed-dose combination development with latanoprost.",
+    "source_url": "https://clinicaltrials.gov/study/NCT07354516"
   },
   {
     "title": "SpyGlass BIM-IOL Phase 3 clinical trial overview",
@@ -42,6 +64,61 @@
     "indication": "Open-angle glaucoma / ocular hypertension",
     "summary": "SpyGlass source covering Phase 1/2 results and first randomized participants in Phase 3.",
     "source_url": "https://ir.spyglasspharma.com/news-releases/news-release-details/spyglass-pharma-reports-fourth-quarter-and-full-year-2025"
+  },
+  {
+    "title": "SpyGlass BIM-DRS Phase 1 trial overview",
+    "date": "2026-03-30",
+    "company": "SpyGlass Pharma",
+    "company_slug": "spyglass-pharma",
+    "program": "BIM-DRS",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for SpyGlass removable bimatoprost drug ring development.",
+    "source_url": "https://clinicaltrials.gov/study/NCT07641296"
+  },
+  {
+    "title": "Reformulated PG324 Phase 3 trial overview",
+    "date": "2026-03-30",
+    "company": "Alcon",
+    "company_slug": "alcon",
+    "program": "Reformulated PG324",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for reformulated netarsudil/latanoprost development.",
+    "source_url": "https://clinicaltrials.gov/study/NCT07082816"
+  },
+  {
+    "title": "PA5108 latanoprost acid ocular implant Phase 2 trial overview",
+    "date": "2026-03-30",
+    "company": "PolyActiva",
+    "company_slug": "polyactiva",
+    "program": "PA5108",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov and sponsor pipeline source record for PolyActiva's six-month biodegradable latanoprost acid implant.",
+    "source_url": "https://clinicaltrials.gov/study/NCT06964191"
+  },
+  {
+    "title": "PA5346 latanoprost acid ocular implant Phase 1 trial overview",
+    "date": "2026-03-30",
+    "company": "PolyActiva",
+    "company_slug": "polyactiva",
+    "program": "PA5346",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov and sponsor pipeline source record for PolyActiva's longer-duration latanoprost acid implant.",
+    "source_url": "https://clinicaltrials.gov/study/NCT06964061"
+  },
+  {
+    "title": "DNN.31.19.026 Phase 3 trial overview",
+    "date": "2026-03-30",
+    "company": "Ache Laboratorios",
+    "company_slug": "ache-laboratorios",
+    "program": "DNN.31.19.026",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for a Phase 3 topical treatment trial in ocular hypertension and primary open-angle glaucoma.",
+    "source_url": "https://clinicaltrials.gov/study/NCT07617532"
   },
   {
     "title": "NCX 470 Denali Phase 3 topline results",
@@ -77,6 +154,50 @@
     "source_url": "https://perfusetherapeutics.com/perfuse-therapeutics-announces-positive-results-from-phase-2-clinical-trials-in-glaucoma-and-diabetic-retinopathy-patients/"
   },
   {
+    "title": "GLK-311 iLution Phase 2 trial overview",
+    "date": "2025-02-05",
+    "company": "Glaukos",
+    "company_slug": "glaukos",
+    "program": "GLK-311 iLution",
+    "category": "Pipeline update",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Glaukos investor presentation source for GLK-311 iLution transdermal eyelid travoprost delivery.",
+    "source_url": "https://s206.q4cdn.com/223634169/files/doc_presentations/2025/08/1/Glaukos-Investor-Presentation_August-2025_vF.pdf"
+  },
+  {
+    "title": "Santen approval of Setaneo sepetaprost in Japan",
+    "date": "2025-02-05",
+    "company": "Santen / UBE",
+    "company_slug": "santen-ube",
+    "program": "Sepetaprost / STN1012600",
+    "category": "Regulatory news",
+    "indication": "Glaucoma / ocular hypertension",
+    "summary": "Santen source for Japan approval of sepetaprost ophthalmic solution for glaucoma and ocular hypertension.",
+    "source_url": "https://www.santen.com/en/news/2025/2025_1/20250825"
+  },
+  {
+    "title": "Santen Japan filing for STN1013900 netarsudil ophthalmic solution",
+    "date": "2025-02-05",
+    "company": "Santen / UBE",
+    "company_slug": "santen-ube",
+    "program": "STN1013900",
+    "category": "Regulatory news",
+    "indication": "Glaucoma / ocular hypertension",
+    "summary": "Santen source for Japan marketing application filing for netarsudil ophthalmic solution.",
+    "source_url": "https://www.santen.com/en/news/2025/2025_1/20250730"
+  },
+  {
+    "title": "Bausch + Lomb acquisition of Whitecap Biosciences",
+    "date": "2025-02-05",
+    "company": "Bausch + Lomb / Nicox",
+    "company_slug": "bausch-lomb-nicox",
+    "program": "BL1107 / WB007",
+    "category": "Corporate transaction",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Bausch + Lomb source for acquisition of Whitecap Biosciences and BL1107/WB007 glaucoma pipeline rights.",
+    "source_url": "https://ir.bausch.com/press-releases/bausch-lomb-bolsters-pipeline-acquisition-whitecap-biosciences"
+  },
+  {
     "title": "QLS-111 Phase II Osprey and Apteryx topline data",
     "date": "2025-02-05",
     "company": "Qlaris Bio",
@@ -97,6 +218,50 @@
     "indication": "Open-angle glaucoma / ocular hypertension",
     "summary": "Qlaris news roster documenting fixed-dose combination development with QLS-111 and latanoprost.",
     "source_url": "https://qlaris.bio/news-events/"
+  },
+  {
+    "title": "LL-BMT1 Phase 2b SIGHT-2 results",
+    "date": "2025-02-05",
+    "company": "MediPrint Ophthalmics",
+    "company_slug": "mediprint-ophthalmics",
+    "program": "LL-BMT1",
+    "category": "Clinical data news",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "MediPrint source for bimatoprost drug-eluting contact lens Phase 2b results.",
+    "source_url": "https://mediprintlens.com/mediprint-ophthalmics-announces-promising-results-from-its-sight-2-phase-2b-group-1-clinical-study/"
+  },
+  {
+    "title": "T4090 kinezodianone Phase 2 trial overview",
+    "date": "2024-01-01",
+    "company": "Thea Pharma",
+    "company_slug": "thea-pharma",
+    "program": "T4090 / Kinezodianone R HCl",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for Thea's investigational preservative-free IOP-lowering topical therapy.",
+    "source_url": "https://clinicaltrials.gov/study/NCT06394973"
+  },
+  {
+    "title": "AR-17043 / PG043 Phase 2 trial overview",
+    "date": "2024-01-01",
+    "company": "Alcon",
+    "company_slug": "alcon",
+    "program": "AR-17043 / PG043",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for Alcon's next-generation Rocklatan Phase 2 program.",
+    "source_url": "https://clinicaltrials.gov/study/NCT06441643"
+  },
+  {
+    "title": "Skye strategic discontinuation of SBI-100 glaucoma program",
+    "date": "2024-01-01",
+    "company": "Skye Bioscience",
+    "company_slug": "skye-bioscience",
+    "program": "SBI-100 OE",
+    "category": "Corporate update",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Skye source documenting discontinuation of SBI-100 ophthalmic emulsion development after Phase 2.",
+    "source_url": "https://ir.skyebioscience.com/news-releases/detail/197/skye-concentrates-strategy-and-clinical-development-focus-on-nimacimab-metabolic-program"
   },
   {
     "title": "Glaukos FDA approval of iDose TR",
@@ -121,6 +286,28 @@
     "source_url": "https://theapharmainc.com/news/thea-pharma-inc-launches-iyuzeh-latanoprost-ophthalmic-solution-0-005-in-the-u-s/"
   },
   {
+    "title": "SpyGlass BIM-IOL Phase 1/2 trial overview",
+    "date": "2023-12-13",
+    "company": "SpyGlass Pharma",
+    "company_slug": "spyglass-pharma",
+    "program": "BIM-IOL System",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for earlier BIM-IOL clinical study versus timolol.",
+    "source_url": "https://clinicaltrials.gov/study/NCT06120842"
+  },
+  {
+    "title": "SBI-100 ophthalmic emulsion Phase 2 trial overview",
+    "date": "2023-12-13",
+    "company": "Skye Bioscience",
+    "company_slug": "skye-bioscience",
+    "program": "SBI-100 OE",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for SBI-100 ophthalmic emulsion Phase 2 glaucoma development.",
+    "source_url": "https://clinicaltrials.gov/study/NCT06144918"
+  },
+  {
     "title": "Alcon acquisition of Aerie Pharmaceuticals",
     "date": "2022-09-26",
     "company": "Alcon",
@@ -143,6 +330,39 @@
     "source_url": "https://www.ube.com/ube/en/news/2022/santen-and-ube-received-fda-approval-for-omlonti-omidenepag-isopropyl-ophthalmic-solution-0002-for-t.html"
   },
   {
+    "title": "OTX-TIC Phase 2 trial overview",
+    "date": "2022-09-26",
+    "company": "Ocular Therapeutix",
+    "company_slug": "ocular-therapeutix",
+    "program": "OTX-TIC",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov and sponsor source record for OTX-TIC travoprost intracameral hydrogel.",
+    "source_url": "https://clinicaltrials.gov/study/NCT05335122"
+  },
+  {
+    "title": "Nicotinamide and pyruvate glaucoma neuroenhancement trial overview",
+    "date": "2022-09-26",
+    "company": "Neurotech / Stanford",
+    "company_slug": "neurotech-stanford",
+    "program": "Nicotinamide / Pyruvate",
+    "category": "Clinical trial overview",
+    "indication": "Glaucoma neuroprotection / disease modification",
+    "summary": "ClinicalTrials.gov source record for nicotinamide and pyruvate neuroenhancement research in glaucoma.",
+    "source_url": "https://clinicaltrials.gov/study/NCT05695027"
+  },
+  {
+    "title": "LL-BMT1 Phase 2 trial overview",
+    "date": "2021-01-01",
+    "company": "MediPrint Ophthalmics",
+    "company_slug": "mediprint-ophthalmics",
+    "program": "LL-BMT1",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov source record for weekly bimatoprost drug-eluting contact lens development.",
+    "source_url": "https://clinicaltrials.gov/study/NCT04747808"
+  },
+  {
     "title": "Durysta FDA approval announcement",
     "date": "2020-03-05",
     "company": "AbbVie / Allergan",
@@ -152,6 +372,28 @@
     "indication": "Open-angle glaucoma / ocular hypertension",
     "summary": "Allergan/AbbVie source for FDA approval of the bimatoprost intracameral implant.",
     "source_url": "https://news.abbvie.com/index.php?item=123527&s=2429"
+  },
+  {
+    "title": "AGN-193408 SR Phase 1/2 trial overview",
+    "date": "2020-03-05",
+    "company": "AbbVie / Allergan",
+    "company_slug": "abbvie-allergan",
+    "program": "AGN-193408 SR",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "ClinicalTrials.gov and AbbVie source record for an investigational sustained-release prostamide implant.",
+    "source_url": "https://clinicaltrials.gov/study/NCT04499248"
+  },
+  {
+    "title": "NT-501 CNTF glaucoma neuroprotection trial overview",
+    "date": "2020-03-05",
+    "company": "Neurotech / Stanford",
+    "company_slug": "neurotech-stanford",
+    "program": "NT-501 CNTF",
+    "category": "Clinical trial overview",
+    "indication": "Glaucoma neuroprotection / disease modification",
+    "summary": "ClinicalTrials.gov source record for encapsulated cell therapy delivering ciliary neurotrophic factor in glaucoma.",
+    "source_url": "https://clinicaltrials.gov/study/NCT04577300"
   },
   {
     "title": "Bausch + Lomb and Nicox FDA approval of Vyzulta",

@@ -121,6 +121,83 @@
     "source_url": "https://clinicaltrials.gov/study/NCT07617532"
   },
   {
+    "title": "ARVO poster 2026 URC MPF 3",
+    "date": "2026-03-30",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2026/06/ARVO-poster-2026-URC-MPF-3-Read-Only.pdf"
+  },
+  {
+    "title": "AGS 2026 MPF",
+    "date": "2026-03-30",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2026/06/AGS-2026-MPF-URC.pdf"
+  },
+  {
+    "title": "2025 ISER abstract Osprey Apteryx results",
+    "date": "2026-03-30",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2026/06/2025-ISER-abstract-Osprey-Apteryx-results.pdf"
+  },
+  {
+    "title": "2025 ISER BFF mouse FDC abstract",
+    "date": "2026-03-30",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111 FDC",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2026/06/2025-ISER-BFF-mouse-FDC-abstract.pdf"
+  },
+  {
+    "title": "Mikes 2025 Poster Mike URC2 MPF",
+    "date": "2026-03-30",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2026/06/Mikes-2025-Poster_Mike-URC2-MPF-LR.pdf"
+  },
+  {
+    "title": "2025 Poster Safety tolerability and ocular hypotensive efficacy of QLS 111 a novel ATP sensitive potassium channel opener added to latanoprost monotherapy",
+    "date": "2026-03-30",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111 FDC",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/page/2/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2026/06/2025-Poster_Safety-tolerability-and-ocular-hypotensive-efficacy-of-QLS-111-a-novel-ATP-sensitive-potassium-channel-opener-added-to-latanoprost-monotherapy-vFinal.pdf"
+  },
+  {
+    "title": "2024 Fautsch TM Society abstract",
+    "date": "2026-03-30",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/page/2/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2026/05/2024-Fautsch-TM-Society-abstract.pdf"
+  },
+  {
     "title": "NCX 470 Denali Phase 3 topline results",
     "date": "2025-08-21",
     "company": "Nicox",
@@ -231,6 +308,17 @@
     "source_url": "https://mediprintlens.com/mediprint-ophthalmics-announces-promising-results-from-its-sight-2-phase-2b-group-1-clinical-study/"
   },
   {
+    "title": "PolyActiva Eyecelerator 10.14.25",
+    "date": "2025-02-05",
+    "company": "PolyActiva",
+    "company_slug": "polyactiva",
+    "program": "PA5108",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://polyactiva.com/news/.",
+    "source_url": "https://polyactiva.com/wp-content/uploads/2025/10/PolyActiva-Eyecelerator-10.14.25-FINAL.pdf"
+  },
+  {
     "title": "T4090 kinezodianone Phase 2 trial overview",
     "date": "2024-01-01",
     "company": "Thea Pharma",
@@ -262,6 +350,28 @@
     "indication": "Open-angle glaucoma / ocular hypertension",
     "summary": "Skye source documenting discontinuation of SBI-100 ophthalmic emulsion development after Phase 2.",
     "source_url": "https://ir.skyebioscience.com/news-releases/detail/197/skye-concentrates-strategy-and-clinical-development-focus-on-nimacimab-metabolic-program"
+  },
+  {
+    "title": "WGC 2023 Poster Qlaris Bio May 31 2023 Final Draft BMW3",
+    "date": "2024-01-01",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/page/3/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2024/11/WGC-2023-Poster_Qlaris-Bio-May-31-2023-Final-Draft-BMW3-Read-Only.pdf"
+  },
+  {
+    "title": "PolyActiva Eyecelerator Press Release",
+    "date": "2024-01-01",
+    "company": "PolyActiva",
+    "company_slug": "polyactiva",
+    "program": "PA5108",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://polyactiva.com/news/.",
+    "source_url": "https://polyactiva.com/wp-content/uploads/2024/10/PolyActiva-Eyecelerator-Press-Release_FINAL.pdf"
   },
   {
     "title": "Glaukos FDA approval of iDose TR",
@@ -308,6 +418,17 @@
     "source_url": "https://clinicaltrials.gov/study/NCT06144918"
   },
   {
+    "title": "PolyActiva Phase 2 Results US",
+    "date": "2023-12-13",
+    "company": "PolyActiva",
+    "company_slug": "polyactiva",
+    "program": "PA5108",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://polyactiva.com/news/.",
+    "source_url": "https://polyactiva.com/wp-content/uploads/2023/11/PolyActiva-Phase-2-Results-US.pdf"
+  },
+  {
     "title": "Alcon acquisition of Aerie Pharmaceuticals",
     "date": "2022-09-26",
     "company": "Alcon",
@@ -350,6 +471,39 @@
     "indication": "Glaucoma neuroprotection / disease modification",
     "summary": "ClinicalTrials.gov source record for nicotinamide and pyruvate neuroenhancement research in glaucoma.",
     "source_url": "https://clinicaltrials.gov/study/NCT05695027"
+  },
+  {
+    "title": "ARVO in vivo poster April 2021 final",
+    "date": "2022-09-26",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/page/3/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2022/04/ARVO-in-vivo-poster-April-2021-final-.pdf"
+  },
+  {
+    "title": "ARVO in vitro poster April 2021",
+    "date": "2022-09-26",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/page/3/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2022/04/ARVO-in-vitro-poster-April-2021-final.pdf"
+  },
+  {
+    "title": "American Glaucoma Society Feb 2021 Poster",
+    "date": "2022-09-26",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Presentation/Poster",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Downloaded from https://qlaris.bio/publications-posters/page/3/.",
+    "source_url": "https://qlaris.bio/wp-content/uploads/2022/04/American-Glaucoma-Society-Feb-2021-Poster-FINAL.pdf"
   },
   {
     "title": "LL-BMT1 Phase 2 trial overview",

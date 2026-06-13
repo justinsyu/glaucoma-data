@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-06-13T06:18:24Z",
+  "generated_at_utc": "2026-06-13T06:41:27Z",
   "summary": {
     "in_scope_companies": 19,
     "expected_sources": 19,
     "publication_expected_sources": 19,
-    "press_release_expected_sources": 37,
+    "press_release_expected_sources": 51,
     "latest_checked_sources": 0,
     "latest_expected_sources": 19,
     "latest_run_status": "not_run",

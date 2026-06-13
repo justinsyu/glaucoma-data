@@ -18,6 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "_data"
+DOWNLOADED_DOCUMENTS_FILE = ROOT / "scripts" / "glaucoma_downloaded_documents.json"
 
 
 COMPANIES = [
@@ -300,7 +301,7 @@ DOCUMENTS = [
         "category": "prescribing_information",
         "year": "2017",
         "conference": "FDA",
-        "source_url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/208254s000lbl.pdf",
+        "source_url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/208254s014lbl.pdf",
         "source_page": "https://rhopressa.myalcon.com/",
         "summary": "FDA labeling source for netarsudil ophthalmic solution 0.02%, now marketed by Alcon after the Aerie acquisition.",
     },
@@ -1037,8 +1038,48 @@ def write_json(path: Path, value) -> None:
     write_text(path, json.dumps(value, indent=2) + "\n")
 
 
+def yaml_quote(value: str) -> str:
+    return json.dumps(str(value))
+
+
 def profile_by_slug(slug: str) -> dict:
     return next(company for company in COMPANIES if company["slug"] == slug)
+
+
+def load_downloaded_documents() -> list[dict]:
+    if not DOWNLOADED_DOCUMENTS_FILE.exists():
+        return []
+    records = json.loads(DOWNLOADED_DOCUMENTS_FILE.read_text(encoding="utf-8"))
+    company_slugs = {company["slug"] for company in COMPANIES}
+    output = []
+    for record in records:
+        if record.get("company_slug") not in company_slugs:
+            raise ValueError(f"Unknown company_slug in downloaded document manifest: {record.get('company_slug')}")
+        output.append(record)
+    return output
+
+
+def combined_document_inputs() -> list[dict]:
+    downloaded = load_downloaded_documents()
+    downloaded_by_key = {
+        (record.get("company_slug"), record.get("program"), record.get("title")): record
+        for record in downloaded
+    }
+    merged = []
+    used_keys = set()
+    for doc in DOCUMENTS:
+        key = (doc.get("company_slug"), doc.get("program"), doc.get("title"))
+        update = downloaded_by_key.get(key)
+        if update:
+            merged.append({**doc, **update})
+            used_keys.add(key)
+        else:
+            merged.append(doc)
+    for doc in downloaded:
+        key = (doc.get("company_slug"), doc.get("program"), doc.get("title"))
+        if key not in used_keys and key not in {(item.get("company_slug"), item.get("program"), item.get("title")) for item in DOCUMENTS}:
+            merged.append(doc)
+    return merged
 
 
 def make_profiles(documents: list[dict]) -> list[dict]:
@@ -1063,10 +1104,14 @@ def make_profiles(documents: list[dict]) -> list[dict]:
 
 def make_document_records() -> list[dict]:
     records = []
-    for index, doc in enumerate(DOCUMENTS, 1):
+    for index, doc in enumerate(combined_document_inputs(), 1):
         company = profile_by_slug(doc["company_slug"])
         slug = f"{company['slug']}-{slugify(doc['program'])}-{slugify(doc['title'])}"
-        markdown_file = f"/companies/{company['folder']}/{slugify(doc['program'])}/{doc['category']}/{index:03d}_{slugify(doc['title'])}.md"
+        markdown_file = doc.get(
+            "markdown_file_url",
+            f"/companies/{company['folder']}/{slugify(doc['program'])}/{doc['category']}/{index:03d}_{slugify(doc['title'])}.md",
+        )
+        local_file_url = doc.get("local_file_url", "")
         records.append(
             {
                 "id": f"doc-{index:04d}",
@@ -1083,16 +1128,16 @@ def make_document_records() -> list[dict]:
                 "category": doc["category"],
                 "year": doc["year"],
                 "conference": doc["conference"],
-                "local_file_url": "",
+                "local_file_url": local_file_url,
                 "source_url": doc["source_url"],
                 "source_page": doc["source_page"],
-                "status": "source_link",
+                "status": doc.get("status") or ("downloaded" if local_file_url else "source_link"),
                 "background_image": f"/assets/img/company-backgrounds/{company['slug']}.svg",
                 "primary_color": company["primary"],
                 "secondary_color": company["secondary"],
                 "accent_color": company["accent"],
                 "markdown_file_url": markdown_file,
-                "summary": doc["summary"],
+                "summary": doc.get("summary", ""),
             }
         )
     return records
@@ -1392,20 +1437,22 @@ def write_markdown_pages(documents: list[dict], profiles: list[dict], programs: 
             f"""\
             ---
             layout: company_document_placeholder
-            title: "{doc['title']}"
+            title: {yaml_quote(doc['title'])}
             permalink: {doc['url']}
-            description: "{doc['summary']}"
-            company: "{doc['company']}"
+            description: {yaml_quote(doc['summary'])}
+            company: {yaml_quote(doc['company'])}
             company_slug: {doc['company_slug']}
-            program: "{doc['program']}"
-            indication: "{doc['indication']}"
-            document_type: "{doc['document_type']}"
-            year: "{doc['year']}"
-            source_url: "{doc['source_url']}"
-            markdown_file_url: "{doc['markdown_file_url']}"
-            primary_color: "{company['primary']}"
-            secondary_color: "{company['secondary']}"
-            accent_color: "{company['accent']}"
+            program: {yaml_quote(doc['program'])}
+            indication: {yaml_quote(doc['indication'])}
+            document_type: {yaml_quote(doc['document_type'])}
+            year: {yaml_quote(doc['year'])}
+            source_url: {yaml_quote(doc['source_url'])}
+            source_page: {yaml_quote(doc['source_page'])}
+            local_file_url: {yaml_quote(doc['local_file_url'])}
+            markdown_file_url: {yaml_quote(doc['markdown_file_url'])}
+            primary_color: {yaml_quote(company['primary'])}
+            secondary_color: {yaml_quote(company['secondary'])}
+            accent_color: {yaml_quote(company['accent'])}
             ---
 
             This placeholder preserves the source record in the same archive framework as Glaucoma Data.
@@ -1444,6 +1491,9 @@ def main() -> None:
     write_json(DATA / "source_watchlist.yml", [])
 
     for company in COMPANIES:
+        company_dir = ROOT / "companies" / company["folder"]
+        company_dir.mkdir(parents=True, exist_ok=True)
+        write_text(company_dir / "brand.md", f"# {company['name']}\n\n{company['description']}\n")
         write_text(ROOT / "assets" / "img" / "company-logos" / f"{company['slug']}.svg", svg_logo(company))
         write_text(ROOT / "assets" / "img" / "company-backgrounds" / f"{company['slug']}.svg", svg_background(company))
 

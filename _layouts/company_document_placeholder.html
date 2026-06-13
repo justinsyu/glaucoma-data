@@ -46,6 +46,9 @@ layout: default
       {% if infographic_page %}
         <a class="button button-primary" href="{{ infographic_url | relative_url }}">View infographic</a>
       {% endif %}
+      {% if page.local_file_url and page.local_file_url != "" %}
+        <a class="button button-secondary" href="{{ page.local_file_url | relative_url }}">Open PDF</a>
+      {% endif %}
       {% if page.markdown_file_url and page.markdown_file_url != page.local_file_url %}
         <a class="button button-secondary" href="{{ page.markdown_file_url | relative_url }}">Open markdown</a>
       {% endif %}

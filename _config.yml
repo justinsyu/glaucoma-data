@@ -1,0 +1,39 @@
+title: Glaucoma Data Archive
+description: Plain-text archive of public glaucoma treatment data optimized for search and AI retrieval.
+url: "https://justinsyu.github.io"
+baseurl: "/glaucoma-data"
+lang: en-US
+timezone: America/New_York
+maintainer: Justin Yu
+repository_url: "https://github.com/justinsyu/glaucoma-data"
+
+markdown: kramdown
+theme: null
+
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      last_modified_at: 2026-06-13
+  - scope:
+      path: "plain-text"
+    values:
+      sitemap: false
+
+exclude:
+  - scripts/
+  - vendor/
+  - vendor/bundle/
+  - Gemfile
+  - Gemfile.lock
+  - AGENTS.md
+  - CLAUDE.md
+  - llamaparse.py
+  - .DS_Store
+  - README.md
+  - tmp/
+  - artifacts/
+  - .playwright-mcp/

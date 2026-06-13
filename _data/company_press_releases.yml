@@ -1,0 +1,167 @@
+[
+  {
+    "title": "Bayer agreement to acquire Perfuse Therapeutics",
+    "date": "2026-05-06",
+    "company": "Bayer / Perfuse Therapeutics",
+    "company_slug": "bayer-perfuse",
+    "program": "PER-001",
+    "category": "Corporate transaction",
+    "indication": "Glaucoma / diabetic retinopathy",
+    "summary": "Bayer source documenting the planned acquisition and Phase II status of PER-001.",
+    "source_url": "https://www.bayer.com/en/us/news-stories/perfuse-therapeutics"
+  },
+  {
+    "title": "NCX 470 AGS 2026 Phase 3 data summary",
+    "date": "2026-03-30",
+    "company": "Nicox",
+    "company_slug": "nicox",
+    "program": "NCX 470",
+    "category": "Congress news",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Nicox source summarizing NCX 470 Phase 3 data presented at the 2026 American Glaucoma Society annual meeting.",
+    "source_url": "https://www.nicox.com/wp-content/uploads/EN_AGS-2026-posters-presented_FINAL.pdf"
+  },
+  {
+    "title": "SpyGlass BIM-IOL Phase 3 clinical trial overview",
+    "date": "2026-03-30",
+    "company": "SpyGlass Pharma",
+    "company_slug": "spyglass-pharma",
+    "program": "BIM-IOL System",
+    "category": "Clinical trial overview",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Company source for two parallel registrational Phase 3 BIM-IOL trials.",
+    "source_url": "https://spyglasspharma.com/study-data/"
+  },
+  {
+    "title": "SpyGlass 2025 results and Phase 3 initiation update",
+    "date": "2026-03-30",
+    "company": "SpyGlass Pharma",
+    "company_slug": "spyglass-pharma",
+    "program": "BIM-IOL System",
+    "category": "Corporate update",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "SpyGlass source covering Phase 1/2 results and first randomized participants in Phase 3.",
+    "source_url": "https://ir.spyglasspharma.com/news-releases/news-release-details/spyglass-pharma-reports-fourth-quarter-and-full-year-2025"
+  },
+  {
+    "title": "NCX 470 Denali Phase 3 topline results",
+    "date": "2025-08-21",
+    "company": "Nicox",
+    "company_slug": "nicox",
+    "program": "NCX 470",
+    "category": "Clinical data news",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Nicox source for positive Phase 3 Denali topline data in glaucoma participants.",
+    "source_url": "https://www.nicox.com/wp-content/uploads/EN_NCX470DenaliToplineAugust2025_PR_FINAL.pdf"
+  },
+  {
+    "title": "PER-001 completed Phase 1/2a glaucoma results",
+    "date": "2025-06-24",
+    "company": "Bayer / Perfuse Therapeutics",
+    "company_slug": "bayer-perfuse",
+    "program": "PER-001",
+    "category": "Clinical data news",
+    "indication": "Glaucoma",
+    "summary": "Perfuse source for 24-week Phase 1/2a PER-001 glaucoma data.",
+    "source_url": "https://perfusetherapeutics.com/perfuse-therapeutics-announces-positive-results-from-the-completed-phase-1-2a-clinical-trial-of-per-001-intravitreal-implant-in-patients-with-glaucoma/"
+  },
+  {
+    "title": "PER-001 Phase 2 glaucoma and diabetic retinopathy results",
+    "date": "2025-06-24",
+    "company": "Bayer / Perfuse Therapeutics",
+    "company_slug": "bayer-perfuse",
+    "program": "PER-001",
+    "category": "Clinical data news",
+    "indication": "Glaucoma / diabetic retinopathy",
+    "summary": "Perfuse source for Phase 2 PER-001 results and planned later-stage development.",
+    "source_url": "https://perfusetherapeutics.com/perfuse-therapeutics-announces-positive-results-from-phase-2-clinical-trials-in-glaucoma-and-diabetic-retinopathy-patients/"
+  },
+  {
+    "title": "QLS-111 Phase II Osprey and Apteryx topline data",
+    "date": "2025-02-05",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Clinical data news",
+    "indication": "Primary open-angle glaucoma / ocular hypertension",
+    "summary": "Qlaris source for Phase II Osprey and Apteryx topline data and additive IOP-lowering observations.",
+    "source_url": "https://qlaris.bio/qlaris-bio-announces-positive-topline-data-from-two-phase-ii-trials-of-qls-111-in-patients-with-primary-open-angle-glaucoma-and-ocular-hypertension/"
+  },
+  {
+    "title": "Qlaris fixed-dose QLS-111 and latanoprost development update",
+    "date": "2025-02-05",
+    "company": "Qlaris Bio",
+    "company_slug": "qlaris-bio",
+    "program": "QLS-111",
+    "category": "Pipeline news",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Qlaris news roster documenting fixed-dose combination development with QLS-111 and latanoprost.",
+    "source_url": "https://qlaris.bio/news-events/"
+  },
+  {
+    "title": "Glaukos FDA approval of iDose TR",
+    "date": "2023-12-13",
+    "company": "Glaukos",
+    "company_slug": "glaukos",
+    "program": "iDose TR",
+    "category": "Regulatory news",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Company source for the December 2023 FDA approval of iDose TR.",
+    "source_url": "https://investors.glaukos.com/news/news-details/2023/Glaukos-Announces-FDA-Approval-of-iDoseTR-travoprost-intracameral-implant/default.aspx"
+  },
+  {
+    "title": "Thea U.S. launch of Iyuzeh",
+    "date": "2023-12-13",
+    "company": "Thea Pharma",
+    "company_slug": "thea-pharma",
+    "program": "Iyuzeh",
+    "category": "Commercial news",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Company source for U.S. launch of preservative-free latanoprost.",
+    "source_url": "https://theapharmainc.com/news/thea-pharma-inc-launches-iyuzeh-latanoprost-ophthalmic-solution-0-005-in-the-u-s/"
+  },
+  {
+    "title": "Alcon acquisition of Aerie Pharmaceuticals",
+    "date": "2022-09-26",
+    "company": "Alcon",
+    "company_slug": "alcon",
+    "program": "Rhopressa / Rocklatan",
+    "category": "Corporate transaction",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Company source documenting the transfer of the Aerie glaucoma portfolio into Alcon.",
+    "source_url": "https://www.alcon.com/media-release/alcon-acquire-aerie-pharmaceuticals-inc-enhancing-its-ophthalmic-pharmaceutical/"
+  },
+  {
+    "title": "Santen and UBE FDA approval of Omlonti",
+    "date": "2022-09-26",
+    "company": "Santen / UBE",
+    "company_slug": "santen-ube",
+    "program": "Omlonti",
+    "category": "Regulatory news",
+    "indication": "Primary open-angle glaucoma / ocular hypertension",
+    "summary": "Joint company source documenting the U.S. FDA approval date and indication for Omlonti.",
+    "source_url": "https://www.ube.com/ube/en/news/2022/santen-and-ube-received-fda-approval-for-omlonti-omidenepag-isopropyl-ophthalmic-solution-0002-for-t.html"
+  },
+  {
+    "title": "Durysta FDA approval announcement",
+    "date": "2020-03-05",
+    "company": "AbbVie / Allergan",
+    "company_slug": "abbvie-allergan",
+    "program": "Durysta",
+    "category": "Regulatory news",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Allergan/AbbVie source for FDA approval of the bimatoprost intracameral implant.",
+    "source_url": "https://news.abbvie.com/index.php?item=123527&s=2429"
+  },
+  {
+    "title": "Bausch + Lomb and Nicox FDA approval of Vyzulta",
+    "date": "2017-11-02",
+    "company": "Bausch + Lomb / Nicox",
+    "company_slug": "bausch-lomb-nicox",
+    "program": "Vyzulta",
+    "category": "Regulatory news",
+    "indication": "Open-angle glaucoma / ocular hypertension",
+    "summary": "Joint source for FDA approval of the nitric oxide-donating prostaglandin analog Vyzulta.",
+    "source_url": "https://www.nicox.com/bausch-lomb-nicox-announce-fda-approval-vyzulta-latanoprostene-bunod-ophthalmic-solution-0-024-2/"
+  }
+]

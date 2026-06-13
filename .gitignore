@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.bundle/
+_site/
+.jekyll-cache/
+.sass-cache/
+tmp/
+__pycache__/
+vendor/
+
+# source watcher
+.venv/
+*.egg-info/
+artifacts/watch/observability.sqlite
+artifacts/watch/observability.sqlite-journal
+artifacts/watch/observability.sqlite-wal
+artifacts/watch/observability.sqlite-shm

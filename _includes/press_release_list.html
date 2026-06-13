@@ -1,0 +1,64 @@
+{% assign releases = include.releases %}
+{% assign sort_by = include.sort_by | default: "date" %}
+{% assign sort_dir = include.sort_dir | default: "desc" %}
+{% assign sorted_releases = releases | sort: sort_by %}
+{% if sort_dir == "desc" %}
+  {% assign sorted_releases = sorted_releases | reverse %}
+{% endif %}
+
+<div class="document-list-block press-release-list-block" data-document-list-block>
+  <div class="sort-toolbar" aria-label="Press release sorting controls">
+    <label>
+      <span>Sort by</span>
+      <select data-sort-key>
+        <option value="date"{% if sort_by == "date" %} selected{% endif %}>Date</option>
+        <option value="title"{% if sort_by == "title" %} selected{% endif %}>Title</option>
+        <option value="company"{% if sort_by == "company" %} selected{% endif %}>Company</option>
+        <option value="program"{% if sort_by == "program" %} selected{% endif %}>Program</option>
+        <option value="category"{% if sort_by == "category" %} selected{% endif %}>Category</option>
+        <option value="indication"{% if sort_by == "indication" %} selected{% endif %}>Indication</option>
+      </select>
+    </label>
+    <label>
+      <span>Order</span>
+      <select data-sort-dir>
+        <option value="desc"{% if sort_dir == "desc" %} selected{% endif %}>Newest first</option>
+        <option value="asc"{% if sort_dir == "asc" %} selected{% endif %}>Oldest first</option>
+      </select>
+    </label>
+  </div>
+
+  <ul class="document-list document-rows" data-sortable-documents>
+    {% for release in sorted_releases limit: include.limit %}
+      {% assign row_profile = site.data.company_profiles | where: "slug", release.company_slug | first %}
+      {% assign row_code = row_profile.code | default: "PR" %}
+      {% assign row_primary = row_profile.primary | default: "#06254A" %}
+      <li
+        data-title="{{ release.title | downcase | escape }}"
+        data-date="{{ release.date | date: '%Y-%m-%d' | escape }}"
+        data-company="{{ release.company | downcase | escape }}"
+        data-program="{{ release.program | default: '' | downcase | escape }}"
+        data-indication="{{ release.indication | default: '' | downcase | escape }}"
+        data-category="{{ release.category | default: '' | downcase | escape }}"
+        style="--row-primary: {{ row_primary }};"
+      >
+        <a class="document-row-link" href="{{ release.source_url }}" rel="noopener">
+          <span class="document-row-chip" aria-label="Sponsor code {{ row_code }}">{{ row_code }}</span>
+          <span class="document-row-body">
+            <span class="document-row-title">{{ release.title }}</span>
+            <span class="document-row-meta">
+              <span class="document-row-sponsor">{{ release.company }}</span>
+              {% if release.program %}<span>{{ release.program }}</span>{% endif %}
+              {% if release.category %}<span>{{ release.category }}</span>{% endif %}
+              {% if release.indication %}<span>{{ release.indication }}</span>{% endif %}
+            </span>
+            {% if release.summary %}
+              <span class="document-row-summary">{{ release.summary }}</span>
+            {% endif %}
+          </span>
+          <span class="document-row-year">{{ release.date | date: "%Y-%m-%d" }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

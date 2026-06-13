@@ -1,0 +1,21 @@
+---
+layout: null
+---
+User-agent: *
+Disallow: {{ '/plain-text/' | relative_url }}
+Disallow: {{ '/audit/' | relative_url }}
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}

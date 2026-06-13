@@ -1,0 +1,127 @@
+# Glaucoma Data Archive: per-company sweep configuration.
+#
+# The sweep code is generic. Company-specific knowledge lives here and should
+# remain focused on glaucoma, ocular hypertension, and disease-modifying
+# glaucoma source records.
+
+defaults:
+  user_agent: "glaucoma-data-archive-sweep/0.1"
+  timeout_seconds: 60
+  download_timeout_seconds: 120
+  retry_attempts: 3
+  retry_backoff_seconds: [2, 5, 15]
+  playwright_headless: true
+  pubmed_api_key: ""
+  pubmed_tool_name: "glaucoma-data-archive-sweep"
+  pubmed_email: ""
+
+companies:
+  - id: alcon
+    name: "Alcon"
+    folder: "companies/alcon"
+    tier: 3
+    sources:
+      - url: "https://www.alcon.com/media-releases"
+        discovery_only: true
+        dest_worklist: "companies/alcon/_worklist_pending.md"
+        title_filter: "(?i)Rhopressa|Rocklatan|netarsudil|glaucoma|ocular hypertension"
+
+  - id: abbvie_allergan
+    name: "AbbVie / Allergan"
+    folder: "companies/abbvie_allergan"
+    tier: 3
+    sources:
+      - url: "https://news.abbvie.com/"
+        discovery_only: true
+        dest_worklist: "companies/abbvie_allergan/_worklist_pending.md"
+        title_filter: "(?i)Durysta|bimatoprost|glaucoma|ocular hypertension"
+
+  - id: glaukos
+    name: "Glaukos"
+    folder: "companies/glaukos"
+    tier: 3
+    sources:
+      - url: "https://investors.glaukos.com/news/"
+        discovery_only: true
+        dest_worklist: "companies/glaukos/_worklist_pending.md"
+        title_filter: "(?i)iDose|travoprost|glaucoma|ocular hypertension"
+
+  - id: santen_ube
+    name: "Santen / UBE"
+    folder: "companies/santen_ube"
+    tier: 3
+    sources:
+      - url: "https://www.santen.com/en/news/"
+        discovery_only: true
+        dest_worklist: "companies/santen_ube/_worklist_pending.md"
+        title_filter: "(?i)Omlonti|omidenepag|glaucoma|ocular hypertension"
+
+  - id: bausch_lomb_nicox
+    name: "Bausch + Lomb / Nicox"
+    folder: "companies/bausch_lomb_nicox"
+    tier: 3
+    sources:
+      - url: "https://www.nicox.com/news-and-events/press-releases-archive/"
+        discovery_only: true
+        dest_worklist: "companies/bausch_lomb_nicox/_worklist_pending.md"
+        title_filter: "(?i)Vyzulta|latanoprostene|glaucoma|ocular hypertension"
+
+  - id: sun_pharma_sparc
+    name: "Sun Pharma / SPARC"
+    folder: "companies/sun_pharma_sparc"
+    tier: 3
+    sources:
+      - url: "https://sunpharma.com/media/"
+        discovery_only: true
+        dest_worklist: "companies/sun_pharma_sparc/_worklist_pending.md"
+        title_filter: "(?i)Xelpros|latanoprost|glaucoma|ocular hypertension"
+
+  - id: thea_pharma
+    name: "Thea Pharma"
+    folder: "companies/thea_pharma"
+    tier: 3
+    sources:
+      - url: "https://theapharmainc.com/news/"
+        discovery_only: true
+        dest_worklist: "companies/thea_pharma/_worklist_pending.md"
+        title_filter: "(?i)Iyuzeh|latanoprost|glaucoma|ocular hypertension"
+
+  - id: nicox
+    name: "Nicox"
+    folder: "companies/nicox"
+    tier: 3
+    sources:
+      - url: "https://www.nicox.com/news-and-events/press-releases-archive/"
+        discovery_only: true
+        dest_worklist: "companies/nicox/_worklist_pending.md"
+        title_filter: "(?i)NCX 470|bimatoprost grenod|Denali|Mont Blanc|glaucoma|ocular hypertension"
+
+  - id: qlaris_bio
+    name: "Qlaris Bio"
+    folder: "companies/qlaris_bio"
+    tier: 3
+    sources:
+      - url: "https://qlaris.bio/news-events/"
+        discovery_only: true
+        dest_worklist: "companies/qlaris_bio/_worklist_pending.md"
+        title_filter: "(?i)QLS-111|Osprey|Apteryx|Nightingale|glaucoma|ocular hypertension"
+
+  - id: spyglass_pharma
+    name: "SpyGlass Pharma"
+    folder: "companies/spyglass_pharma"
+    tier: 3
+    sources:
+      - url: "https://ir.spyglasspharma.com/news-releases"
+        discovery_only: true
+        dest_worklist: "companies/spyglass_pharma/_worklist_pending.md"
+        title_filter: "(?i)BIM-IOL|BIM-DRS|bimatoprost|SGP-005|SGP-006|glaucoma|ocular hypertension"
+
+  - id: bayer_perfuse
+    name: "Bayer / Perfuse Therapeutics"
+    folder: "companies/bayer_perfuse"
+    tier: 3
+    sources:
+      - url: "https://perfusetherapeutics.com/news/"
+        discovery_only: true
+        dest_worklist: "companies/bayer_perfuse/_worklist_pending.md"
+        title_filter: "(?i)PER-001|Perfuse|Bayer|endothelin|glaucoma"

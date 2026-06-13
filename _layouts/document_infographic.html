@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+{% comment %}
+  Document infographic layout: visual presentation of a single source document.
+
+  Required frontmatter:
+    title          - Infographic page title (usually mirrors the source doc title).
+    company        - Sponsor display name (e.g., "Roche / Genentech").
+    company_slug   - Sponsor slug used to look up brand colors.
+    source_url     - URL of the source document page (e.g., /company-documents/<slug>/).
+    source_title   - Display name shown on the back-link.
+
+  Optional frontmatter:
+    program, indication, year, conference, document_type
+{% endcomment %}
+
+{% assign brand = site.data.company_profiles | where: "slug", page.company_slug | first %}
+{% assign doc_code = brand.code | default: "DOC" %}
+
+<article
+  class="document document-infographic"
+  style="--company-primary: {{ brand.primary }}; --company-secondary: {{ brand.secondary }}; --company-accent: {{ brand.accent }};"
+>
+  <header class="document-header">
+    <div class="brand-chip-row">
+      <span class="brand-chip">{{ doc_code }}</span>
+      <span class="brand-chip-sponsor">
+        {% if brand %}
+          <a href="{{ brand.page_url | relative_url }}">{{ page.company }}</a>
+        {% else %}
+          {{ page.company | default: "Unknown company" }}
+        {% endif %}
+      </span>
+    </div>
+    <p class="eyebrow">Infographic{% if page.document_type %} &middot; {{ page.document_type }}{% endif %}{% if page.year %}, {{ page.year }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    <dl class="metadata">
+      {% if page.program %}
+      <div>
+        <dt>Program</dt>
+        <dd>{{ page.program }}</dd>
+      </div>
+      {% endif %}
+      {% if page.indication %}
+      <div>
+        <dt>Indication</dt>
+        <dd>{{ page.indication }}</dd>
+      </div>
+      {% endif %}
+      {% if page.conference %}
+      <div>
+        <dt>Conference</dt>
+        <dd>{{ page.conference }}</dd>
+      </div>
+      {% endif %}
+    </dl>
+    {% comment %}
+      Liquid treats an empty string as truthy, so a simple page.pdf_url check
+      would render a blank link that resolves to the current page. Explicit
+      `!= ""` guards keep empty frontmatter values from emitting self-linking
+      buttons (see the infographic frontmatter where pdf_url is intentionally
+      blank when no public PDF mirror exists).
+    {% endcomment %}
+    <div class="document-actions" aria-label="Source links">
+      {% if page.source_url and page.source_url != "" %}
+        <a class="button button-primary" href="{{ page.source_url | relative_url }}">&larr; Back to source document</a>
+      {% endif %}
+      {% if page.pdf_url and page.pdf_url != "" %}
+        <a class="button button-secondary" href="{{ page.pdf_url }}" target="_blank" rel="noopener">View PDF</a>
+      {% endif %}
+    </div>
+    <p class="document-provenance">
+      This infographic is generated from the parsed text of the source document. All quantitative claims trace back to the linked source; no claims are added beyond what the source records.
+    </p>
+  </header>
+
+  <div class="content infographic-content">
+    {{ content }}
+  </div>
+</article>

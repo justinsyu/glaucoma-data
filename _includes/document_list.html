@@ -1,0 +1,90 @@
+{% assign documents = include.documents %}
+{% assign neutral_list = include.neutral | default: false %}
+{% assign infographic_mode = include.infographic_mode | default: false %}
+{% assign sort_by = include.sort_by | default: "title" %}
+{% assign sort_dir = include.sort_dir | default: "asc" %}
+{% assign sorted_documents = documents | sort: sort_by %}
+{% if sort_dir == "desc" %}
+  {% assign sorted_documents = sorted_documents | reverse %}
+{% endif %}
+{% if infographic_mode %}
+  {% assign all_infographics = site.pages | where_exp: "p", "p.layout == 'document_infographic'" %}
+{% endif %}
+
+<div class="document-list-block{% if infographic_mode %} infographic-list-block{% endif %}{% if include.match_summary_spacing %} document-list-block-summary-spaced{% endif %}" data-document-list-block>
+  <div class="sort-toolbar" aria-label="Document sorting controls">
+    <label>
+      <span>Sort by</span>
+      <select data-sort-key>
+        <option value="title"{% if sort_by == "title" %} selected{% endif %}>Title</option>
+        <option value="year"{% if sort_by == "year" %} selected{% endif %}>Year</option>
+        <option value="company"{% if sort_by == "company" %} selected{% endif %}>Company</option>
+        <option value="program"{% if sort_by == "program" %} selected{% endif %}>Program</option>
+        <option value="indication"{% if sort_by == "indication" %} selected{% endif %}>Indication</option>
+        <option value="conference"{% if sort_by == "conference" %} selected{% endif %}>Conference</option>
+        <option value="document_type"{% if sort_by == "document_type" %} selected{% endif %}>Type</option>
+      </select>
+    </label>
+    <label>
+      <span>Order</span>
+      <select data-sort-dir>
+        <option value="asc"{% if sort_dir == "asc" %} selected{% endif %}>Ascending</option>
+        <option value="desc"{% if sort_dir == "desc" %} selected{% endif %}>Descending</option>
+      </select>
+    </label>
+  </div>
+
+  <ul class="document-list document-rows{% if neutral_list %} neutral-list{% endif %}" data-sortable-documents>
+    {% for document in sorted_documents limit: include.limit %}
+      {% assign row_link = document.url %}
+      {% assign skip_row = false %}
+      {% if infographic_mode %}
+        {% assign matching_infographic = all_infographics | where: "source_url", document.url | first %}
+        {% if matching_infographic %}
+          {% assign row_link = matching_infographic.url %}
+        {% else %}
+          {% assign skip_row = true %}
+        {% endif %}
+      {% endif %}
+      {% unless skip_row %}
+      {% assign row_profile = nil %}
+      {% if document.company_slug %}
+        {% assign row_profile = site.data.company_profiles | where: "slug", document.company_slug | first %}
+      {% endif %}
+      {% unless row_profile %}
+        {% assign row_profile = site.data.company_profiles | where: "name", document.company | first %}
+      {% endunless %}
+      {% unless row_profile %}
+        {% assign row_profile = site.data.company_profiles | where: "short_name", document.company | first %}
+      {% endunless %}
+      {% assign row_code = row_profile.code | default: "DOC" %}
+      {% assign row_primary = document.primary_color | default: row_profile.primary | default: "#06254A" %}
+      <li
+        data-title="{{ document.title | downcase | escape }}"
+        data-year="{{ document.year | default: '' | escape }}"
+        data-company="{{ document.company | default: '' | downcase | escape }}"
+        data-program="{{ document.program | default: '' | downcase | escape }}"
+        data-indication="{{ document.indication | default: '' | downcase | escape }}"
+        data-conference="{{ document.conference | default: '' | downcase | escape }}"
+        data-document-type="{{ document.document_type | default: '' | downcase | escape }}"
+        {% unless neutral_list %}style="--row-primary: {{ row_primary }};"{% endunless %}
+      >
+        <a class="document-row-link" href="{{ row_link | relative_url }}">
+          <span class="document-row-chip" aria-label="Sponsor code {{ row_code }}">{{ row_code }}</span>
+          <span class="document-row-body">
+            <span class="document-row-title">{{ document.title }}</span>
+            <span class="document-row-meta">
+              <span class="document-row-sponsor">{{ document.company | default: "Unknown company" }}</span>
+              {% if document.program %}<span>{{ document.program }}</span>{% endif %}
+              {% if document.document_type %}<span>{{ document.document_type }}</span>{% endif %}
+              {% if document.indication %}<span>{{ document.indication }}</span>{% endif %}
+              {% if document.conference %}<span>{{ document.conference }}</span>{% endif %}
+            </span>
+          </span>
+          <span class="document-row-year">{{ document.year | default: "" }}</span>
+        </a>
+      </li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</div>

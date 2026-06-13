@@ -1,0 +1,112 @@
+# Glaucoma Data Archive: per-company press release source configuration.
+
+companies:
+  - id: alcon
+    company_slug: alcon
+    name: "Alcon"
+    tier: 1
+    sources:
+      - source_id: alcon-media-releases
+        url: https://www.alcon.com/media-releases
+        fetcher: requests
+        title_filter: '(?i)Rhopressa|Rocklatan|netarsudil|glaucoma|ocular hypertension'
+
+  - id: abbvie_allergan
+    company_slug: abbvie-allergan
+    name: "AbbVie / Allergan"
+    tier: 1
+    sources:
+      - source_id: abbvie-news
+        url: https://news.abbvie.com/
+        fetcher: requests
+        title_filter: '(?i)Durysta|bimatoprost|glaucoma|ocular hypertension'
+
+  - id: glaukos
+    company_slug: glaukos
+    name: "Glaukos"
+    tier: 1
+    sources:
+      - source_id: glaukos-investor-news
+        url: https://investors.glaukos.com/news/
+        fetcher: requests
+        title_filter: '(?i)iDose|travoprost|glaucoma|ocular hypertension'
+
+  - id: santen_ube
+    company_slug: santen-ube
+    name: "Santen / UBE"
+    tier: 1
+    sources:
+      - source_id: santen-news
+        url: https://www.santen.com/en/news/
+        fetcher: requests
+        title_filter: '(?i)Omlonti|omidenepag|glaucoma|ocular hypertension'
+
+  - id: bausch_lomb_nicox
+    company_slug: bausch-lomb-nicox
+    name: "Bausch + Lomb / Nicox"
+    tier: 1
+    sources:
+      - source_id: nicox-press-archive
+        url: https://www.nicox.com/news-and-events/press-releases-archive/
+        fetcher: requests
+        title_filter: '(?i)Vyzulta|latanoprostene|glaucoma|ocular hypertension'
+
+  - id: sun_pharma_sparc
+    company_slug: sun-pharma-sparc
+    name: "Sun Pharma / SPARC"
+    tier: 1
+    sources:
+      - source_id: sun-pharma-media
+        url: https://sunpharma.com/media/
+        fetcher: requests
+        title_filter: '(?i)Xelpros|latanoprost|glaucoma|ocular hypertension'
+
+  - id: thea_pharma
+    company_slug: thea-pharma
+    name: "Thea Pharma"
+    tier: 1
+    sources:
+      - source_id: thea-news
+        url: https://theapharmainc.com/news/
+        fetcher: requests
+        title_filter: '(?i)Iyuzeh|latanoprost|glaucoma|ocular hypertension'
+
+  - id: nicox
+    company_slug: nicox
+    name: "Nicox"
+    tier: 1
+    sources:
+      - source_id: nicox-ncx470-press
+        url: https://www.nicox.com/news-and-events/press-releases-archive/
+        fetcher: requests
+        title_filter: '(?i)NCX 470|bimatoprost grenod|Denali|Mont Blanc|glaucoma|ocular hypertension'
+
+  - id: qlaris_bio
+    company_slug: qlaris-bio
+    name: "Qlaris Bio"
+    tier: 1
+    sources:
+      - source_id: qlaris-news
+        url: https://qlaris.bio/news-events/
+        fetcher: requests
+        title_filter: '(?i)QLS-111|Osprey|Apteryx|Nightingale|glaucoma|ocular hypertension'
+
+  - id: spyglass_pharma
+    company_slug: spyglass-pharma
+    name: "SpyGlass Pharma"
+    tier: 1
+    sources:
+      - source_id: spyglass-investor-news
+        url: https://ir.spyglasspharma.com/news-releases
+        fetcher: requests
+        title_filter: '(?i)BIM-IOL|BIM-DRS|bimatoprost|SGP-005|SGP-006|glaucoma|ocular hypertension'
+
+  - id: bayer_perfuse
+    company_slug: bayer-perfuse
+    name: "Bayer / Perfuse Therapeutics"
+    tier: 1
+    sources:
+      - source_id: perfuse-news
+        url: https://perfusetherapeutics.com/news/
+        fetcher: requests
+        title_filter: '(?i)PER-001|Perfuse|Bayer|endothelin|glaucoma'

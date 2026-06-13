@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+{% assign profile = site.data.company_profiles | where: "slug", page.company_slug | first %}
+{% assign company_documents = site.data.company_documents | where: "company_slug", page.company_slug %}
+{% assign programs = company_documents | map: "program" | compact | uniq | sort %}
+{% assign categories = company_documents | map: "category" | compact | uniq | sort %}
+
+<section
+  class="company-hero"
+  style="--company-primary: {{ profile.primary }}; --company-secondary: {{ profile.secondary }}; --company-accent: {{ profile.accent }}; --company-highlight: {{ profile.highlight }};"
+>
+  <div class="company-hero-content">
+    <div class="brand-chip-row">
+      <span class="brand-chip">{{ profile.code }}</span>
+      <span class="brand-chip-sponsor">Company archive</span>
+    </div>
+    <h1>{{ profile.name }}</h1>
+    <p class="lead">{{ profile.description }}</p>
+  </div>
+</section>
+
+<section class="summary-grid" aria-label="{{ profile.name }} archive summary">
+  <div>
+    <strong>Documents</strong>
+    <span>{{ company_documents | size }}</span>
+  </div>
+  <div>
+    <strong>Programs</strong>
+    <span>{% if programs.size > 0 %}{{ programs | join: ", " }}{% else %}Pending source documents{% endif %}</span>
+  </div>
+  <div>
+    <strong>Categories</strong>
+    <span>{% if categories.size > 0 %}{{ categories | join: ", " | replace: "_", " " }}{% else %}Not yet populated{% endif %}</span>
+  </div>
+  <div>
+    <strong>Brand source</strong>
+    <span><a href="{{ profile.brand_site }}" rel="noopener">{{ profile.short_name }}</a></span>
+  </div>
+</section>
+
+<section>
+  <h2>{{ profile.short_name }} documents</h2>
+  {% if company_documents.size > 0 %}
+    {% include document_list.html documents=company_documents sort_by="title" sort_dir="asc" %}
+  {% else %}
+    <p class="empty-state">No source documents have been added for this company yet. The company page is present so future downloads have a stable destination.</p>
+  {% endif %}
+</section>

@@ -1,0 +1,168 @@
+---
+layout: default
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "isPartOf": {
+    "@type": "Collection",
+    "name": {{ site.title | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ page.company | default: site.title | jsonify }}
+  },
+  "datePublished": {{ page.year | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: site.time | date_to_xmlschema | jsonify }},
+  "about": [
+    {{ page.program | jsonify }},
+    {{ page.indication | jsonify }}
+  ],
+  "isBasedOn": {
+    "@type": "DigitalDocument",
+    "name": {{ page.source_file | default: page.title | jsonify }},
+    "url": {{ page.pdf_url | jsonify }}
+  },
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "encodingFormat": "text/html",
+      "url": {{ page.url | absolute_url | jsonify }}
+    }{% if page.plain_text_url %},
+    {
+      "@type": "MediaObject",
+      "encodingFormat": "text/plain",
+      "url": {{ page.plain_text_url | absolute_url | jsonify }}
+    }{% endif %}{% if page.pdf_url %},
+    {
+      "@type": "MediaObject",
+      "encodingFormat": "application/pdf",
+      "url": {{ page.pdf_url | jsonify }}
+    }{% endif %}
+  ]
+}
+</script>
+
+{% comment %}Resolve brand profile by name so the document header can pick up the sponsor chip and color.{% endcomment %}
+{% assign doc_brand = site.data.company_profiles | where: "name", page.company | first %}
+{% unless doc_brand %}
+  {% assign doc_brand = site.data.company_profiles | where: "short_name", page.company | first %}
+{% endunless %}
+{% assign doc_code = doc_brand.code | default: "DOC" %}
+
+<article class="document">
+  <header
+    class="document-header"
+    {% if doc_brand %}style="--company-primary: {{ doc_brand.primary }}; --company-secondary: {{ doc_brand.secondary }}; --company-accent: {{ doc_brand.accent }};"{% endif %}
+  >
+    <div class="brand-chip-row">
+      <span class="brand-chip">{{ doc_code }}</span>
+      <span class="brand-chip-sponsor">
+        {% if doc_brand %}
+          <a href="{{ doc_brand.page_url | relative_url }}">{{ page.company }}</a>
+        {% else %}
+          {{ page.company | default: "Unknown company" }}
+        {% endif %}
+      </span>
+    </div>
+    <p class="eyebrow">{{ page.document_type }}{% if page.year %}, {{ page.year }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    <dl class="metadata">
+      <div>
+        <dt>Program</dt>
+        <dd>
+          {% if page.program == "4D-150" %}
+            <a href="{{ '/programs/4d-150/' | relative_url }}">{{ page.program }}</a>
+          {% elsif page.program == "4D-310" %}
+            <a href="{{ '/programs/4d-310/' | relative_url }}">{{ page.program }}</a>
+          {% elsif page.program == "4D-710" %}
+            <a href="{{ '/programs/4d-710/' | relative_url }}">{{ page.program }}</a>
+          {% else %}
+            {{ page.program | default: "Unspecified" }}
+          {% endif %}
+        </dd>
+      </div>
+      <div>
+        <dt>Indication</dt>
+        <dd>
+          {% if page.indication contains "ocular hypertension" or page.indication contains "Open-angle glaucoma" or page.indication contains "Primary open-angle glaucoma" %}
+            <a href="{{ '/indications/open-angle-glaucoma-ocular-hypertension/' | relative_url }}">{{ page.indication }}</a>
+          {% elsif page.indication contains "neuroprotection" or page.indication contains "disease modification" %}
+            <a href="{{ '/indications/glaucoma-neuroprotection/' | relative_url }}">{{ page.indication }}</a>
+          {% else %}
+            {{ page.indication }}
+          {% endif %}
+        </dd>
+      </div>
+      {% if page.conference %}
+      <div>
+        <dt>Conference</dt>
+        <dd>{{ page.conference }}</dd>
+      </div>
+      {% endif %}
+      {% if page.source_file %}
+      <div>
+        <dt>Source file</dt>
+        <dd>{{ page.source_file }}</dd>
+      </div>
+      {% endif %}
+    </dl>
+    {% comment %}
+      Infographic files are keyed by the company_documents.json slug to keep
+      one unified namespace. Parsed source documents can look up the matching
+      company_documents entry by source_file to find the correct infographic URL.
+    {% endcomment %}
+    {% if page.url contains '/4dmt/' %}
+      {% assign matching_doc = nil %}
+      {% if page.source_file %}
+        {% for d in site.data.company_documents %}
+          {% if d.markdown_file_url and d.markdown_file_url contains page.source_file %}
+            {% assign matching_doc = d %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if matching_doc %}
+        {% assign mdoc_segments = matching_doc.url | remove_first: '/' | split: '/' %}
+        {% assign infographic_url = '/infographics/' | append: mdoc_segments[1] | append: '/' %}
+      {% else %}
+        {% assign url_no_lead = page.url | remove_first: '/' %}
+        {% assign url_segments = url_no_lead | split: '/' %}
+        {% assign infographic_url = '/infographics/4dmt-' | append: url_segments[1] | append: '/' %}
+      {% endif %}
+    {% else %}
+      {% assign url_no_lead = page.url | remove_first: '/' %}
+      {% assign url_segments = url_no_lead | split: '/' %}
+      {% assign infographic_url = '/infographics/' | append: url_segments[1] | append: '/' %}
+    {% endif %}
+    {% assign infographic_page = site.pages | where: 'url', infographic_url | first %}
+    {% comment %}
+      Liquid treats "" as truthy; guard with `!= ""` so blank frontmatter URLs
+      do not emit `<a href="">` buttons that link back to the current page.
+    {% endcomment %}
+    <div class="document-actions" aria-label="Document source links">
+      {% if infographic_page %}
+        <a class="button button-primary" href="{{ infographic_url | relative_url }}">View infographic</a>
+      {% endif %}
+      {% if page.pdf_url and page.pdf_url != "" %}
+        <a class="button {% if infographic_page %}button-secondary{% else %}button-primary{% endif %}" href="{{ page.pdf_url }}" target="_blank" rel="noopener">View PDF</a>
+      {% endif %}
+      {% if page.plain_text_url and page.plain_text_url != "" %}
+        <a class="button button-secondary" href="{{ page.plain_text_url | relative_url }}" target="_blank" rel="nofollow noopener">View plain text</a>
+      {% endif %}
+    </div>
+    <p class="document-provenance">
+      This page is generated from a cleaned Markdown extraction of the linked public source PDF. The HTML page is the canonical crawlable version for search, citation, and retrieval; the plain-text export is provided as a secondary machine-readable copy.
+    </p>
+  </header>
+
+  <div class="content">
+    {{ content }}
+  </div>
+</article>

@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+{% assign company_profile = site.data.company_profiles | where: "slug", page.company_slug | first %}
+{% assign doc_code = company_profile.code | default: "DOC" %}
+
+{% comment %}
+  Source of truth for sponsor colors is _data/company_profiles.json so the
+  document page matches its infographic. Page frontmatter primary_color /
+  secondary_color / accent_color was an earlier per-document override that
+  drifted out of sync with the profile for some sponsors (e.g. EyePoint
+  shipped with #004f71 here while the profile is #6F1D91); fall back to it
+  only if no profile color exists.
+{% endcomment %}
+<article
+  class="document placeholder-document"
+  style="--company-primary: {{ company_profile.primary | default: page.primary_color }}; --company-secondary: {{ company_profile.secondary | default: page.secondary_color }}; --company-accent: {{ company_profile.accent | default: page.accent_color }};"
+>
+  <header class="document-header">
+    <div class="brand-chip-row">
+      <span class="brand-chip">{{ doc_code }}</span>
+      <span class="brand-chip-sponsor">
+        <a href="{{ company_profile.page_url | relative_url }}">{{ company_profile.name }}</a>
+      </span>
+    </div>
+    <p class="eyebrow">{{ page.document_type }}{% if page.year %}, {{ page.year }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    <dl class="metadata">
+      <div>
+        <dt>Program</dt>
+        <dd>{{ page.program | default: "Unspecified" }}</dd>
+      </div>
+      <div>
+        <dt>Type</dt>
+        <dd>{{ page.document_type }}</dd>
+      </div>
+    </dl>
+
+    {% assign url_no_lead = page.url | remove_first: '/' %}
+    {% assign url_segments = url_no_lead | split: '/' %}
+    {% assign doc_slug_only = url_segments[1] %}
+    {% assign infographic_url = '/infographics/' | append: doc_slug_only | append: '/' %}
+    {% assign infographic_page = site.pages | where: 'url', infographic_url | first %}
+    <div class="document-actions">
+      {% if infographic_page %}
+        <a class="button button-primary" href="{{ infographic_url | relative_url }}">View infographic</a>
+      {% endif %}
+      {% if page.markdown_file_url and page.markdown_file_url != page.local_file_url %}
+        <a class="button button-secondary" href="{{ page.markdown_file_url | relative_url }}">Open markdown</a>
+      {% endif %}
+      {% if page.source_url and page.source_url != "" %}
+        <a class="button button-secondary" href="{{ page.source_url }}" rel="noopener">View source</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="content">
+    {{ content }}
+  </section>
+</article>

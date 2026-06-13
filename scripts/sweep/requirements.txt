@@ -1,0 +1,4 @@
+# Runtime dependencies for the sweep.
+PyYAML>=6.0
+requests>=2.31
+playwright>=1.40

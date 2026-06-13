@@ -1,0 +1,1994 @@
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --background-strong: #ebeceb;
+  --surface: #ffffff;
+  --surface-strong: #ffffff;
+  --surface-soft: #f7f9fb;
+  --surface-elevated: #ebeceb;
+  --text: #06254a;
+  --body-text: #3c3c3c;
+  --muted: #68717c;
+  --muted-strong: #3c3c3c;
+  --border: #ebeceb;
+  --border-strong: #d9d9d9;
+  --accent: #1c71ed;
+  --accent-strong: #06254a;
+  --accent-navy: #06254a;
+  --accent-navy-alt: #114987;
+  --accent-teal: #22b3cd;
+  --accent-periwinkle: #76a6eb;
+  --accent-pink: #ea18a8;
+  --accent-light-pink: #f270c9;
+  --accent-green: #00844f;
+  --accent-mint: #9fffd7;
+  --accent-soft: rgba(28, 113, 237, 0.08);
+  --panel-blue-bg: rgba(28, 113, 237, 0.08);
+  --panel-blue-border: rgba(28, 113, 237, 0.24);
+  --panel-teal-bg: rgba(34, 179, 205, 0.1);
+  --panel-teal-border: rgba(34, 179, 205, 0.28);
+  --panel-periwinkle-bg: rgba(118, 166, 235, 0.12);
+  --panel-periwinkle-border: rgba(118, 166, 235, 0.32);
+  --panel-pink-bg: rgba(234, 24, 168, 0.08);
+  --panel-pink-border: rgba(234, 24, 168, 0.24);
+  --neutral-panel-bg: #f8fafb;
+  --neutral-panel-border: #d9d9d9;
+  --neutral-panel-ink: #334155;
+  --code: #f7f9fb;
+  --radius-panel: 1.25rem;
+  --radius-card: 1rem;
+  --radius-tight: 0.5rem;
+  --radius-pill: 9999px;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--body-text);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header,
+.site-footer {
+  padding: 1rem max(1rem, calc((100vw - 76rem) / 2));
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+nav a {
+  color: var(--accent-navy);
+  border: 0;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  padding: 0.2rem 0;
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: border-color 160ms ease;
+}
+
+nav a:hover {
+  border-bottom-color: var(--accent-navy);
+  background: transparent;
+}
+
+main {
+  padding: 2.5rem max(1rem, calc((100vw - 76rem) / 2));
+}
+
+.hero {
+  display: grid;
+  gap: 1rem;
+  max-width: 76rem;
+  margin-bottom: 2rem;
+}
+
+/* Editorial page header. Used by .hero, .company-hero, and .document-header. */
+.hero,
+.company-hero,
+.document-header {
+  position: relative;
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 2.25rem;
+  padding: 0 0 1.5rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--company-primary, var(--text)) 32%, var(--border-strong));
+  background: transparent;
+  border-radius: 0;
+}
+
+.hero h1,
+.company-hero h1,
+.document-header h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+
+.company-hero h1 {
+  max-width: 52rem;
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+}
+
+.document-header h1 {
+  max-width: 56rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+  line-height: 1.18;
+}
+
+.hero p,
+.company-hero .lead,
+.document-header .document-provenance,
+.lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 56rem;
+  text-wrap: pretty;
+}
+
+.company-hero .lead {
+  color: var(--muted-strong);
+}
+
+.hero > .lead,
+.company-hero .lead {
+  display: none;
+}
+
+.company-hero-content {
+  display: grid;
+  gap: 0.7rem;
+}
+
+/* Brand-color sponsor chip used in company hero, document header, and placeholder. */
+.brand-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.32rem 0.6rem;
+  border-radius: 2px;
+  background: var(--company-primary, var(--accent-navy));
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  align-self: start;
+  justify-self: start;
+}
+
+.brand-chip + .brand-chip-sponsor {
+  margin-left: 0.75rem;
+}
+
+.brand-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.15rem;
+}
+
+.brand-chip-sponsor {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  color: var(--company-primary, var(--text));
+}
+
+.eyebrow,
+.company-hero .eyebrow,
+.document-header .eyebrow,
+.placeholder-document .eyebrow {
+  margin: 0;
+  color: var(--company-primary, var(--muted-strong));
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Compact metadata grid used under document and company headers. */
+.metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 0.65rem;
+  margin: 0.2rem 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+.metadata div {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--border-strong);
+  padding-left: 0.85rem;
+}
+
+.metadata dt {
+  display: block;
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.metadata dd {
+  display: block;
+  margin: 0.2rem 0 0;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.metadata a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.metadata a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* Hero summary strip on the homepage and per-company landing. Hairline cells, no gradient. */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 0.85rem;
+  margin: 0;
+  padding: 1.1rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  background: transparent;
+  border-radius: 0;
+}
+
+.summary-grid div {
+  padding: 0 0 0 0.85rem;
+  border-left: 1px solid var(--border-strong);
+  background: transparent;
+  min-width: 0;
+}
+
+.summary-grid div:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.summary-grid-no-top {
+  border-top: 0;
+  margin-top: -2.25rem;
+}
+
+.audit-summary-grid {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  column-gap: 1rem;
+  margin-top: -2.25rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0;
+}
+
+.audit-summary-grid div:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.audit-summary-grid + .audit-panel {
+  margin-top: 0.55rem;
+}
+
+.summary-grid.clinical-trials-summary-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  column-gap: 0.75rem;
+}
+
+.summary-grid.clinical-trials-summary-grid strong {
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) and (min-width: 641px) {
+  .audit-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .audit-summary-grid div:first-child {
+    padding-left: 0.85rem;
+    border-left: 1px solid var(--border-strong);
+  }
+
+  .audit-summary-grid div:nth-child(2n + 1) {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .audit-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-summary-grid div,
+  .audit-summary-grid div:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+.summary-grid strong {
+  display: block;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.summary-grid span {
+  display: block;
+  margin: 0.25rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.document-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.document-provenance {
+  margin: 0;
+  max-width: 100%;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.25rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 0.5rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.button-primary {
+  background: var(--company-primary, var(--accent-navy));
+  color: #ffffff;
+  border-color: var(--company-primary, var(--accent-navy));
+}
+
+.button-primary:hover {
+  background: color-mix(in srgb, var(--company-primary, var(--accent-navy)) 78%, black);
+  border-color: color-mix(in srgb, var(--company-primary, var(--accent-navy)) 78%, black);
+}
+
+.button-secondary {
+  border-color: color-mix(in srgb, var(--company-primary, var(--accent-navy)) 36%, var(--border-strong));
+  background: transparent;
+  color: var(--company-primary, var(--accent-navy));
+}
+
+.button-secondary:hover {
+  border-color: var(--company-primary, var(--accent-navy));
+  background: color-mix(in srgb, var(--company-primary, var(--accent-navy)) 6%, transparent);
+}
+
+.document-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.document-list-block {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+}
+
+.document-list-block-summary-spaced {
+  margin-top: -0.75rem;
+}
+
+.sort-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: end;
+  padding-bottom: 0.6rem;
+}
+
+.infographic-list-block .sort-toolbar {
+  padding-top: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.press-release-list-block .sort-toolbar {
+  border-bottom: 0;
+}
+
+.press-release-summary {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.sort-toolbar label {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 10rem;
+}
+
+.sort-toolbar span {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.sort-toolbar select {
+  min-height: 2.2rem;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+  font-family: var(--font-display);
+  padding: 0.3rem 1.8rem 0.3rem 0.6rem;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text) 50%), linear-gradient(135deg, var(--text) 50%, transparent 50%);
+  background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.sort-toolbar select:focus {
+  outline: none;
+  border-bottom-color: var(--text);
+}
+
+/* Card-grid list (only used by /companies/ index, keeps the soft tinted cards) */
+.document-list:not(.document-rows) li {
+  position: relative;
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: var(--surface);
+  transition: border-color 160ms ease;
+}
+
+/* Document rows (the canonical list grammar). Hairline rule between rows, brand-color chip + serif title. */
+.document-list.document-rows {
+  display: block;
+  gap: 0;
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+}
+
+.sort-toolbar + .document-list.document-rows {
+  border-top: 0;
+}
+
+.document-list.document-rows li {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  border-radius: 0;
+  transition: background-color 160ms ease;
+}
+
+.document-list.document-rows li:last-child {
+  border-bottom: 0;
+}
+
+.document-list.document-rows .document-row-link {
+  display: grid;
+  grid-template-columns: 4.6rem minmax(0, 1fr) minmax(6.2rem, max-content);
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1.2rem 0.25rem 1.25rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.document-list.document-rows .document-row-chip {
+  align-self: start;
+  display: inline-block;
+  min-width: 3.6rem;
+  padding: 0.32rem 0.5rem;
+  border-radius: 2px;
+  background: var(--row-primary, var(--accent-navy));
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.document-list.document-rows .document-row-body {
+  min-width: 0;
+  display: block;
+}
+
+.document-list.document-rows .document-row-title {
+  display: block;
+  margin: 0 0 0.35rem;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: clamp(1.05rem, 1.1vw + 0.7rem, 1.2rem);
+  font-weight: 500;
+  line-height: 1.26;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+
+.document-list.document-rows .document-row-meta {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.document-list.document-rows .document-row-meta span + span::before {
+  content: " / ";
+  color: var(--border-strong);
+  margin: 0 0.25rem;
+}
+
+.document-list.document-rows .document-row-sponsor {
+  color: var(--row-primary, var(--text));
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+.document-list.document-rows .document-row-summary {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--muted-strong);
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.document-list.document-rows .document-row-year {
+  align-self: start;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+  color: var(--text);
+  padding-top: 0.05rem;
+}
+
+.document-list.document-rows li:hover {
+  background: color-mix(in srgb, var(--row-primary, var(--accent-navy)) 4%, transparent);
+}
+
+.document-list.document-rows li:focus-within {
+  background: color-mix(in srgb, var(--row-primary, var(--accent-navy)) 6%, transparent);
+  outline: 2px solid color-mix(in srgb, var(--row-primary, var(--accent-navy)) 30%, transparent);
+  outline-offset: -2px;
+}
+
+.company-card-grid {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+}
+
+.company-card-link {
+  position: relative;
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.25rem 1.15rem 1.3rem;
+}
+
+.company-card-link .brand-chip {
+  background: var(--card-primary);
+  margin-bottom: 0.2rem;
+}
+
+.company-card-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  min-height: 3rem;
+  margin: 0.1rem 0 0.45rem;
+  padding: 0.5rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.company-card-logo {
+  display: block;
+  height: 2rem;
+  width: auto;
+  max-width: 11rem;
+  object-fit: contain;
+}
+
+.company-card-logo-secondary {
+  height: 1.55rem;
+  opacity: 0.92;
+  border-left: 1px solid color-mix(in srgb, var(--card-primary) 18%, transparent);
+  padding-left: 0.85rem;
+}
+
+/* Logos whose source asset uses white-on-transparent wordmarks need a dark backdrop on the card. */
+.company-card-logos.logo-on-dark {
+  margin: 0.1rem -0.4rem 0.45rem;
+  padding: 0.55rem 0.85rem;
+  background: var(--card-primary);
+  border: 1px solid color-mix(in srgb, var(--card-primary) 70%, black);
+  border-radius: 2px;
+}
+
+.company-card-logos.logo-on-dark .company-card-logo-secondary {
+  border-left-color: rgba(255, 255, 255, 0.32);
+}
+
+/* Partner marks shipped as dark monotone wordmarks need to be flipped to light on a dark backdrop. */
+.company-card-logos.logo-on-dark .company-card-logo[src*="abbvie"],
+.company-card-logos.logo-on-dark .company-card-logo[src*="roche"] {
+  filter: brightness(0) invert(1);
+}
+
+/* Square / very small marks (Bayer cross) read better when the logo container gives them more height. */
+.company-card-logos.logo-square .company-card-logo {
+  height: 2.4rem;
+  max-width: 3.2rem;
+}
+
+.document-list li[data-company-color="true"] .topic-card-title {
+  color: var(--text);
+}
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .document-list li[data-company-color="true"] .topic-card-title {
+    --title-grad-a: var(--text);
+    --title-grad-b: var(--text);
+    --title-grad-c: var(--text);
+    background-image: linear-gradient(135deg, var(--title-grad-a) 0%, var(--title-grad-b) 55%, var(--title-grad-c) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.document-list.neutral-list:not(.document-rows) li {
+  border-color: var(--border-strong);
+  background: var(--surface);
+}
+
+.document-list:not(.document-rows) li:hover {
+  border-color: rgba(28, 113, 237, 0.5);
+}
+
+.document-list:not(.document-rows) li:focus-within {
+  border-color: rgba(28, 113, 237, 0.72);
+  outline: 3px solid rgba(28, 113, 237, 0.18);
+  outline-offset: 2px;
+}
+
+.document-list:not(.document-rows) li[data-company-color="true"] {
+  --card-bg: var(--surface);
+  --border-grad-a: var(--border-strong);
+  --border-grad-b: var(--border-strong);
+  --border-grad-c: var(--border-strong);
+  border-color: transparent;
+  background:
+    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    linear-gradient(135deg, var(--border-grad-a) 0%, var(--border-grad-b) 55%, var(--border-grad-c) 100%) border-box;
+  transition: border-color 160ms ease;
+}
+
+.document-list:not(.document-rows) li[data-company-color="true"]:hover,
+.document-list:not(.document-rows) li[data-company-color="true"]:focus-within {
+  --card-bg: var(--surface);
+  --border-grad-a: var(--card-primary);
+  --border-grad-b: var(--card-secondary);
+  --border-grad-c: var(--card-accent);
+  outline: none;
+}
+
+.document-list:not(.document-rows) li[data-company-color="true"]:hover .topic-card-title,
+.document-list:not(.document-rows) li[data-company-color="true"]:focus-within .topic-card-title {
+  --title-grad-a: var(--card-primary);
+  --title-grad-b: var(--card-secondary);
+  --title-grad-c: var(--card-accent);
+  color: var(--card-primary);
+}
+
+.document-list:not(.document-rows) li[data-company-color="true"]:hover .topic-card-meta,
+.document-list:not(.document-rows) li[data-company-color="true"]:focus-within .topic-card-meta,
+.document-list:not(.document-rows) li[data-company-color="true"]:hover .topic-card-description,
+.document-list:not(.document-rows) li[data-company-color="true"]:focus-within .topic-card-description {
+  color: var(--card-primary);
+}
+
+
+.document-card-link,
+.topic-card-link {
+  display: grid;
+  gap: 0.35rem;
+  min-height: 100%;
+  padding: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.document-card-link:focus,
+.topic-card-link:focus {
+  outline: none;
+}
+
+.document-card-title,
+.topic-card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--text);
+  transition: color 160ms ease;
+}
+
+.document-card-meta,
+.topic-card-meta,
+.topic-card-description {
+  color: var(--muted);
+  transition: color 160ms ease;
+}
+
+.topic-card-meta {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.document-list a:not(.document-card-link):not(.topic-card-link) {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.document-list p,
+.document-card-meta {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+section {
+  margin-block: 2rem;
+}
+
+section:first-child {
+  margin-top: 0;
+}
+
+.section-summary-spaced {
+  margin-top: -0.75rem;
+}
+
+section > h2 {
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-strong);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 1.7vw + 0.4rem, 1.7rem);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+
+section > h2 + p {
+  margin-top: 0;
+}
+
+.document {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--muted-strong);
+  font-family: var(--font-body);
+}
+
+.content {
+  padding: 1.5rem 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+  margin-top: 1.5em;
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0;
+  color: var(--text);
+}
+
+.content h1:first-child,
+.content h2:first-child {
+  margin-top: 0;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.25rem auto;
+  border: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: transparent;
+}
+
+/*
+ * Hide embedded images on document pages so only parsed text renders.
+ * Page screenshots and figure cutouts extracted from source PDFs make the
+ * body copy hard to read; readers who want figures can open the source PDF.
+ * The markdown files retain their image references and the image files
+ * remain on disk so this rendering choice is reversible.
+ */
+.document .content img,
+.document .converted-document-content img {
+  display: none;
+}
+
+.document .content p:has(> img:only-child),
+.document .converted-document-content p:has(> img:only-child) {
+  display: none;
+}
+
+/*
+ * Push the sponsor's brand color into document body content so each
+ * /4dmt/<slug>/ and /company-documents/<slug>/ page feels visually anchored
+ * to its sponsor. The default.html layout already exposes --company-primary
+ * on <body>; previously only the document header chip, eyebrow, and the
+ * infographic widgets used it. Headings, links, table-header rules, list
+ * bullets, and horizontal rules now pick up the brand color, kept readable
+ * by mixing in 15-20% of the base text color where needed.
+ */
+.document .content h2,
+.document .content h3,
+.document .content h4,
+.document .converted-document-content h2,
+.document .converted-document-content h3,
+.document .converted-document-content h4 {
+  color: color-mix(in srgb, var(--company-primary, var(--text)) 82%, var(--text));
+}
+
+.document .content h2,
+.document .converted-document-content h2 {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--company-primary, var(--text)) 30%, var(--border-strong));
+}
+
+.document .content a:not(.button):not(.brand-chip-sponsor a),
+.document .converted-document-content a:not(.button) {
+  color: var(--company-primary, var(--accent-navy));
+  text-decoration-color: color-mix(in srgb, var(--company-primary, var(--text)) 45%, transparent);
+}
+
+.document .content a:not(.button):hover,
+.document .converted-document-content a:not(.button):hover {
+  text-decoration-color: var(--company-primary, var(--accent-navy));
+}
+
+.document .content table th,
+.document .converted-document-content table th {
+  color: color-mix(in srgb, var(--company-primary, var(--text)) 70%, var(--muted));
+  border-bottom-color: color-mix(in srgb, var(--company-primary, var(--text)) 70%, var(--text));
+}
+
+.document .content table,
+.document .converted-document-content table {
+  border-top-color: color-mix(in srgb, var(--company-primary, var(--text)) 70%, var(--text));
+  border-bottom-color: color-mix(in srgb, var(--company-primary, var(--text)) 70%, var(--text));
+}
+
+.document .content hr,
+.document .converted-document-content hr {
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, var(--company-primary, var(--text)) 30%, var(--border-strong));
+  margin: 2rem 0;
+}
+
+.document .content ul > li::marker,
+.document .content ol > li::marker,
+.document .converted-document-content ul > li::marker,
+.document .converted-document-content ol > li::marker {
+  color: var(--company-primary, var(--accent-navy));
+}
+
+.document .content blockquote,
+.document .converted-document-content blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--company-primary, var(--accent-navy));
+  background: color-mix(in srgb, var(--company-primary, var(--text)) 5%, transparent);
+  color: var(--text);
+}
+
+.document .content code,
+.document .converted-document-content code {
+  background: color-mix(in srgb, var(--company-primary, var(--text)) 7%, var(--code));
+}
+
+table,
+.content table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content table {
+  margin: 2rem 0 1.5rem;
+}
+
+table {
+  margin: 2rem 0 1.5rem;
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+  background: transparent;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.content th,
+table th,
+table td,
+.content td {
+  min-width: 9rem;
+  padding: 0.7rem 2rem 0.7rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  text-align: left;
+  vertical-align: top;
+}
+
+.content th:first-child,
+.content td:first-child,
+table th:first-child,
+table td:first-child {
+  padding-right: 3.5rem;
+}
+
+.content th:last-child,
+.content td:last-child,
+table th:last-child,
+table td:last-child {
+  padding-right: 0;
+}
+
+table th,
+.content th {
+  padding-top: 1.1rem;
+  padding-bottom: 0.85rem;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--text);
+}
+
+table td,
+.content td {
+  color: var(--body-text);
+}
+
+table tbody tr:last-child td,
+.content tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+table td:first-child,
+.content td:first-child {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+table a,
+.content table a {
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-color: var(--border-strong);
+}
+
+table a:hover,
+.content table a:hover {
+  text-decoration-color: var(--text);
+}
+
+.topic-hero {
+  max-width: 76rem;
+}
+
+.topic-index-hero .lead {
+  max-width: 100%;
+}
+
+.infographics-index-hero .lead {
+  max-width: 100%;
+}
+
+.audit-index-hero .lead {
+  max-width: 100%;
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 0.85rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+  background: transparent;
+  border-radius: 0;
+}
+
+.metric-strip div {
+  min-width: 0;
+  padding: 0 0 0 0.85rem;
+  border-left: 1px solid var(--border-strong);
+  background: transparent;
+}
+
+.metric-strip div:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.metric-strip strong {
+  display: block;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.metric-strip span {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.evidence-grid {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border-strong);
+}
+
+.evidence-grid-2,
+.evidence-grid-3 {
+  grid-template-columns: 1fr;
+}
+
+.evidence-card {
+  padding: 1rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: transparent;
+}
+
+.evidence-card h3 {
+  margin: 0 0 0.4rem;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+.evidence-card p {
+  margin: 0;
+}
+
+.evidence-card p + p {
+  margin-top: 0.75rem;
+}
+
+.citation-line {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.timeline div {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding: 0.85rem 0;
+  border: 0;
+  border-top: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: transparent;
+}
+
+.timeline div:first-child {
+  border-top: 0;
+}
+
+.timeline strong {
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.flow-diagram {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0;
+  margin: 1rem 0;
+  border-top: 1px solid var(--border-strong);
+}
+
+.flow-diagram div {
+  position: relative;
+  min-height: 4rem;
+  display: grid;
+  place-items: center;
+  padding: 0.9rem;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  border-right: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-align: center;
+}
+
+.flow-diagram div:last-child {
+  border-right: 0;
+}
+
+.bar-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.15rem 0 1.35rem;
+}
+
+.bar-list div {
+  display: grid;
+  grid-template-columns: minmax(8rem, 15rem) minmax(14rem, 1fr);
+  gap: 1.35rem;
+  align-items: center;
+}
+
+.bar-list span {
+  color: var(--muted-strong);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.bar-list strong {
+  --bar: 50%;
+  display: flex;
+  align-items: center;
+  min-height: 2.05rem;
+  min-width: 4.5rem;
+  padding: 0.35rem 0.7rem;
+  border: 0;
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--company-primary, var(--accent-navy)) 28%, transparent) 0%, color-mix(in srgb, var(--company-primary, var(--accent-navy)) 28%, transparent) var(--bar), transparent var(--bar), transparent 100%);
+  border-bottom: 1px solid var(--border-strong);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/*
+ * Document infographic styles. Reuse the existing metric-strip, bar-list,
+ * flow-diagram, evidence-grid, evidence-card, and timeline widgets. The rules
+ * below add inline-SVG chart support, a stat-card grid, and stagger-reveal
+ * animations that respect prefers-reduced-motion.
+ */
+.document-infographic .document-header {
+  border-color: color-mix(in srgb, var(--company-primary, var(--text)) 35%, var(--border-strong));
+}
+
+.infographic-content {
+  display: grid;
+  gap: 2.25rem;
+}
+
+.infographic-content > section {
+  margin: 0;
+  padding: 0;
+}
+
+.infographic-content > section > h2,
+.infographic-content > section > h3 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.infographic-content > section > h2 {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.infographic-content > section > h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--muted-strong);
+}
+
+.infographic-content .infographic-caption,
+.infographic-content figcaption {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.stat-grid .stat {
+  padding: 1rem 1.1rem 1rem 0.9rem;
+  border-right: 1px solid var(--border-strong);
+  background: transparent;
+}
+
+.stat-grid .stat:last-child {
+  border-right: 0;
+}
+
+.stat-grid .stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--company-primary, var(--text));
+}
+
+.stat-grid .stat-label {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+.stat-grid .stat-unit {
+  display: inline-block;
+  margin-left: 0.25rem;
+  font-size: 0.95rem;
+  color: var(--muted-strong);
+  font-weight: 500;
+}
+
+.svg-chart {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem 0 0;
+}
+
+.svg-chart .axis,
+.svg-chart .axis-tick {
+  stroke: var(--border-strong);
+  stroke-width: 1;
+  fill: none;
+}
+
+.svg-chart .axis-label,
+.svg-chart .tick-label,
+.svg-chart .series-label {
+  fill: var(--muted-strong);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.svg-chart .grid-line {
+  stroke: var(--border-strong);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+  opacity: 0.55;
+}
+
+.svg-chart .bar {
+  fill: var(--company-primary, var(--accent-navy));
+}
+
+.svg-chart .bar.alt {
+  fill: var(--company-secondary, var(--muted-strong));
+}
+
+.svg-chart .bar.accent {
+  fill: var(--company-accent, var(--accent-navy));
+}
+
+.svg-chart .line {
+  fill: none;
+  stroke: var(--company-primary, var(--accent-navy));
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.svg-chart .line.alt {
+  stroke: var(--company-secondary, var(--muted-strong));
+  stroke-dasharray: 4 4;
+}
+
+.svg-chart .line.accent {
+  stroke: var(--company-accent, var(--text));
+}
+
+.svg-chart .point {
+  fill: var(--company-primary, var(--accent-navy));
+}
+
+.svg-chart .point.alt {
+  fill: var(--company-secondary, var(--muted-strong));
+}
+
+.svg-chart .area {
+  fill: color-mix(in srgb, var(--company-primary, var(--accent-navy)) 16%, transparent);
+  stroke: none;
+}
+
+.svg-chart .value-label {
+  fill: var(--text);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--muted-strong);
+}
+
+.chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chart-legend i {
+  display: inline-block;
+  width: 0.85rem;
+  height: 0.2rem;
+  border-radius: 1px;
+  background: var(--company-primary, var(--accent-navy));
+  font-style: normal;
+}
+
+.chart-legend i.alt {
+  background: var(--company-secondary, var(--muted-strong));
+}
+
+.chart-legend i.accent {
+  background: var(--company-accent, var(--text));
+}
+
+.callout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.5rem;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--company-primary, var(--accent-navy));
+  background: color-mix(in srgb, var(--company-primary, var(--text)) 5%, transparent);
+}
+
+.callout strong {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+
+@keyframes infographic-fade-up {
+  from { opacity: 0; transform: translateY(0.6rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.infographic-content > section,
+.infographic-content > .stat-grid,
+.infographic-content > .callout,
+.infographic-content > .svg-chart {
+  animation: infographic-fade-up 0.55s ease-out both;
+}
+
+.infographic-content > *:nth-child(1)  { animation-delay: 0.00s; }
+.infographic-content > *:nth-child(2)  { animation-delay: 0.06s; }
+.infographic-content > *:nth-child(3)  { animation-delay: 0.12s; }
+.infographic-content > *:nth-child(4)  { animation-delay: 0.18s; }
+.infographic-content > *:nth-child(5)  { animation-delay: 0.24s; }
+.infographic-content > *:nth-child(6)  { animation-delay: 0.30s; }
+.infographic-content > *:nth-child(7)  { animation-delay: 0.36s; }
+.infographic-content > *:nth-child(8)  { animation-delay: 0.42s; }
+.infographic-content > *:nth-child(n+9) { animation-delay: 0.48s; }
+
+.infographic-content .bar-list strong {
+  transition: background-position 0.5s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .infographic-content > section,
+  .infographic-content > .stat-grid,
+  .infographic-content > .callout,
+  .infographic-content > .svg-chart {
+    animation: none;
+  }
+}
+
+/*
+ * Disclosure-toggle for the underlying data table beneath a chart.
+ * Always present multi-timepoint or multi-cohort data as a chart first;
+ * stash the equivalent table inside a <details class="data-table-toggle">
+ * so the chart stays the primary visual and curious readers can expand the
+ * exact values.
+ */
+.data-table-toggle {
+  margin: 1rem 0 1.25rem;
+}
+
+.data-table-toggle > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--muted-strong);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.data-table-toggle > summary::-webkit-details-marker {
+  display: none;
+}
+
+.data-table-toggle > summary::before {
+  content: "+";
+  display: inline-block;
+  width: 0.9rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--company-primary, var(--text));
+}
+
+.data-table-toggle[open] > summary::before {
+  content: "\2212"; /* minus sign */
+}
+
+.data-table-toggle > summary:hover,
+.data-table-toggle > summary:focus-visible {
+  border-color: var(--company-primary, var(--text));
+  color: var(--text);
+  background: color-mix(in srgb, var(--company-primary, var(--text)) 6%, transparent);
+  outline: none;
+}
+
+.data-table-toggle table {
+  margin-top: 1rem;
+}
+
+/*
+ * Interactive line / bar chart hover tooltip.
+ * The infographic-charts.js script reads data-x / data-y / data-series
+ * attributes off each <circle class="point"> or <rect class="bar"> and
+ * positions a tooltip element next to the cursor. The chart still works
+ * without JS: <title> children on each point provide a native fallback.
+ */
+.svg-chart[data-interactive] .point,
+.svg-chart[data-interactive] .bar {
+  cursor: pointer;
+  transition: r 0.12s ease, opacity 0.12s ease, transform 0.12s ease;
+}
+
+.svg-chart[data-interactive] .point {
+  pointer-events: all;
+}
+
+.svg-chart[data-interactive] .point:hover,
+.svg-chart[data-interactive] .point.is-active {
+  r: 6.5;
+}
+
+.svg-chart[data-interactive] .bar:hover,
+.svg-chart[data-interactive] .bar.is-active {
+  opacity: 0.78;
+}
+
+.svg-chart[data-interactive] .hover-guide {
+  stroke: var(--company-primary, var(--text));
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+}
+
+.svg-chart[data-interactive] .hover-guide.is-visible {
+  opacity: 0.55;
+}
+
+.chart-tooltip {
+  position: fixed;
+  z-index: 30;
+  min-width: 9rem;
+  max-width: 18rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  background: var(--surface, #fff);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  pointer-events: none;
+  box-shadow: 0 6px 18px -10px rgba(0, 0, 0, 0.35);
+  transform: translate(-50%, calc(-100% - 0.6rem));
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+.chart-tooltip.is-visible {
+  opacity: 1;
+}
+
+.chart-tooltip strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.chart-tooltip .tooltip-series {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+  color: var(--muted-strong);
+}
+
+.chart-tooltip .tooltip-series i {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 1px;
+  background: var(--company-primary, var(--text));
+  font-style: normal;
+}
+
+.chart-tooltip .tooltip-series i.alt {
+  background: var(--company-secondary, var(--muted-strong));
+}
+
+.chart-tooltip .tooltip-series i.accent {
+  background: var(--company-accent, var(--text));
+}
+
+/*
+ * Mermaid diagrams (transformed from ```mermaid code fences by
+ * assets/js/mermaid-loader.js). The diagram is rendered as an inline SVG;
+ * center it, cap the width to the content column, and add a subtle hairline
+ * so it reads as a figure rather than floating loose markup. Before mermaid
+ * finishes loading, the .mermaid div briefly shows raw text, hide it with
+ * font-size:0 so there is no flash of unrendered code.
+ */
+.mermaid {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1rem;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-soft, transparent);
+  text-align: center;
+  overflow-x: auto;
+}
+
+.mermaid:not([data-processed="true"]) {
+  font-size: 0;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+code,
+pre {
+  background: var(--code);
+}
+
+code {
+  padding: 0.1rem 0.25rem;
+  border-radius: var(--radius-tight);
+  font-family: var(--font-mono);
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: var(--radius-card);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100%;
+    column-gap: 1rem;
+    row-gap: 0.45rem;
+  }
+
+  nav a {
+    flex: 0 0 auto;
+    padding: 0.2rem 0;
+  }
+
+  main {
+    padding-top: 1.5rem;
+    overflow-x: hidden;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  table {
+    margin-inline: -0.25rem;
+    width: calc(100% + 0.5rem);
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td,
+  .content th,
+  .content td {
+    min-width: 9rem;
+    padding: 0.72rem 0.75rem;
+  }
+
+  .bar-list div {
+    grid-template-columns: minmax(5.75rem, 7.25rem) minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .document-list.document-rows .document-row-link {
+    grid-template-columns: 3.6rem minmax(0, 1fr);
+    gap: 0.9rem;
+    row-gap: 0.4rem;
+    padding: 1rem 0.1rem;
+  }
+
+  .document-list.document-rows .document-row-year {
+    grid-column: 2;
+    text-align: left;
+    padding-top: 0;
+  }
+}
+
+
+/* Index/listing pages stay neutral, even if body has a brand class */
+.companies-page .company,
+body.companies-page {
+  --company-primary: var(--accent-navy);
+  --company-secondary: var(--accent-teal);
+  --company-accent: var(--accent-pink);
+  --company-highlight: var(--accent-periwinkle);
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  table-layout: auto;
+}
+
+.audit-table th,
+.audit-table td {
+  min-width: 6rem;
+  padding: 0.55rem 1rem 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.audit-table td {
+  overflow-wrap: anywhere;
+}
+
+.audit-table td:first-child {
+  min-width: 7.5rem;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.audit-table td:nth-child(2) {
+  min-width: 8.5rem;
+}
+
+.audit-table th {
+  min-width: max-content;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.audit-wide-table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.audit-table code {
+  font-size: 0.8em;
+}
+
+.audit-detail-list {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.audit-detail-list strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.clinical-trials-table .nct-id,
+.clinical-trials-table .nct-id a {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.clinical-trials-table th:nth-child(4),
+.clinical-trials-table td:nth-child(4) {
+  min-width: 10rem;
+}
+
+.audit-subtle {
+  color: var(--muted);
+  font-size: 0.78em;
+}
+
+.audit-panel {
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--border-strong);
+}
+
+.audit-panel .metadata div:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.45rem;
+  padding: 0.18rem 0.48rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  background: var(--surface-soft);
+  color: var(--muted-strong);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.status-ok,
+.status-success,
+.status-new_trial,
+.status-checked_ok,
+.status-checked_no_candidates,
+.status-checked_with_new_downloads,
+.status-checked_with_worklist_items {
+  border-color: rgba(0, 132, 79, 0.35);
+  background: rgba(0, 132, 79, 0.08);
+  color: var(--accent-green);
+}
+
+.status-warning,
+.status-partial,
+.status-trial_updated,
+.status-manual_retrieval_required {
+  border-color: rgba(196, 122, 36, 0.38);
+  background: rgba(196, 122, 36, 0.1);
+  color: #7a4a12;
+}
+
+.status-high,
+.status-failed,
+.status-removed_trial,
+.status-fetch_error,
+.status-download_error,
+.status-parse_error,
+.status-validation_error,
+.status-build_error,
+.status-missing {
+  border-color: rgba(234, 24, 168, 0.28);
+  background: rgba(234, 24, 168, 0.08);
+  color: var(--accent-pink);
+}
+
+.status-muted,
+.status-not_run,
+.status-skipped_by_config {
+  color: var(--muted);
+}

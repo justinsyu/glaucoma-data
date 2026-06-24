@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
-from retina_watch.extractors.base import ExtractedLink
-from retina_watch.routing import apply_routing
-from retina_watch.watchlist import RouterRule, SourceEntry
+from glaucoma_watch.extractors.base import ExtractedLink
+from glaucoma_watch.routing import apply_routing
+from glaucoma_watch.watchlist import RouterRule, SourceEntry
 
 
 def _src(**kw) -> SourceEntry:

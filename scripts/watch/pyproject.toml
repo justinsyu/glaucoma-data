@@ -36,7 +36,7 @@ test = [
 ]
 
 [project.scripts]
-glaucoma-watch = "retina_watch.cli:main"
+glaucoma-watch = "glaucoma_watch.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

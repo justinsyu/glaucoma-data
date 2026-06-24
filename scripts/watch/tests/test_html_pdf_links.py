@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from retina_watch.extractors.html_pdf_links import extract
+from glaucoma_watch.extractors.html_pdf_links import extract
 
 
 SAMPLE_HTML = b"""

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import pytest
-from retina_watch.watchlist import SourceEntry
+from glaucoma_watch.watchlist import SourceEntry
 
 
 def test_minimal_valid_entry():

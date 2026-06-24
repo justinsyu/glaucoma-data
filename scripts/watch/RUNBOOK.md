@@ -62,7 +62,7 @@ history, schedules, asset checks, and a structured run log.
 
 ```powershell
 $env:DAGSTER_HOME = "$pwd\.dagster_home"
-.\.venv\Scripts\dagster.exe dev -m retina_watch.dagster_defs --port 3333
+.\.venv\Scripts\dagster.exe dev -m glaucoma_watch.dagster_defs --port 3333
 # then open http://localhost:3333
 ```
 
@@ -160,7 +160,7 @@ schedule state is persisted in the Dagster instance database under
 3. Discover the publication URL by hand. Open the company's IR / MedInfo
    site, find the page that lists posters/manuscripts, copy the URL.
 4. If the page is JavaScript-rendered or behind an HCP modal, add a recipe
-   in `scripts/watch/src/retina_watch/recipes.py` (a few lines of Python).
+   in `scripts/watch/src/glaucoma_watch/recipes.py` (a few lines of Python).
    If it is plain HTML, just edit the YAML to set the right URL and
    `source_type: html_pdf_links`.
 5. Run a one-source dry-run: `retina-watch run --source-id=<id>`. Inspect

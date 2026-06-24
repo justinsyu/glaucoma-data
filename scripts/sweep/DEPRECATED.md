@@ -5,15 +5,15 @@ incorporates every operationally proven pattern that sweep introduced:
 
 | Sweep pattern | Where it lives in watch |
 |---|---|
-| `playwright_hcp` Akamai + HCP click flow | `scripts/watch/src/retina_watch/extractors/playwright_hcp.py` |
-| `playwright_loadmore` Load-More clicker | `scripts/watch/src/retina_watch/extractors/playwright_loadmore.py` |
-| Per-source `title_filter` regex | `SourceEntry.title_filter` + `scripts/watch/src/retina_watch/routing.py` |
+| `playwright_hcp` Akamai + HCP click flow | `scripts/watch/src/glaucoma_watch/extractors/playwright_hcp.py` |
+| `playwright_loadmore` Load-More clicker | `scripts/watch/src/glaucoma_watch/extractors/playwright_loadmore.py` |
+| Per-source `title_filter` regex | `SourceEntry.title_filter` + `scripts/watch/src/glaucoma_watch/routing.py` |
 | `dest_router` / `title_router` rules | `SourceEntry.dest_router` / `title_router` + `routing.py` |
 | Tier 1-5 classification | `SourceEntry.tier` (see `scripts/watch/RUNBOOK.md` section 4) |
 | `discovery_only` + worklist files | `SourceEntry.discovery_only` + `SourceEntry.dest_worklist` + `worklist.py` |
 | `_worklist_pending_*.md` convention | `worklist.py` emits the same format |
 | `RUNBOOK.md` | `scripts/watch/RUNBOOK.md` |
-| Bayer / 4DMT / Clearside / Adverum / EyePoint / Ocular / REGENXBIO / Regeneron / Roche recipes | `scripts/watch/src/retina_watch/recipes.py` |
+| Bayer / 4DMT / Clearside / Adverum / EyePoint / Ocular / REGENXBIO / Regeneron / Roche recipes | `scripts/watch/src/glaucoma_watch/recipes.py` |
 | 4DMT `/pipeline/` URL (replaces broken `/publications/`) | applied via `recipes.py` -> watchlist |
 | Bayer Akamai 403 finding (May 2026 WAF hardening) | Bayer recipe is now Tier 3 / `discovery_only` with the Akamai click flow kept for the day the WAF relaxes |
 

@@ -7,10 +7,10 @@ from pathlib import Path
 
 import pytest
 
-from retina_watch import worklist as wl_mod
-from retina_watch.extractors.base import ExtractedLink
-from retina_watch.watchlist import SourceEntry
-from retina_watch.worklist import maybe_emit_worklist
+from glaucoma_watch import worklist as wl_mod
+from glaucoma_watch.extractors.base import ExtractedLink
+from glaucoma_watch.watchlist import SourceEntry
+from glaucoma_watch.worklist import maybe_emit_worklist
 
 
 @pytest.fixture

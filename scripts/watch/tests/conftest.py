@@ -2,7 +2,7 @@ import os
 import sys
 from pathlib import Path
 
-# Make ``retina_watch`` importable without an editable install (the install is
+# Make ``glaucoma_watch`` importable without an editable install (the install is
 # present in our normal environment, but explicit paths keep CI/test runs
 # decoupled from install state).
 ROOT = Path(__file__).resolve().parents[1]

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from retina_watch.candidates import (
+from glaucoma_watch.candidates import (
     _ManifestIndex,
     _canonical_url,
     _classify_link,

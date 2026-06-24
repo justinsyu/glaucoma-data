@@ -15,7 +15,7 @@ after each materialization.
 
 Start the Dagster UI locally with::
 
-    dagster dev -m retina_watch.dagster_defs
+    dagster dev -m glaucoma_watch.dagster_defs
 """
 
 from dataclasses import asdict

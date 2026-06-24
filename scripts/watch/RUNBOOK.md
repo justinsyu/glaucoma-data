@@ -1,4 +1,4 @@
-# retina-watch operator runbook
+# glaucoma-watch operator runbook
 
 Deterministic source watcher with an append-only SQLite audit trail, a
 Dagster orchestration layer, and a Jekyll-rendered audit page. This runbook
@@ -18,8 +18,8 @@ python -m venv .venv
 pip install -e "scripts/watch[test,js,dagster,sentry]"
 python -m playwright install chromium
 
-retina-watch init-db
-retina-watch bootstrap-watchlist
+glaucoma-watch init-db
+glaucoma-watch bootstrap-watchlist
 ```
 
 The `init-db` step creates `artifacts/watch/observability.sqlite` with WAL
@@ -36,22 +36,22 @@ a hand-tuned recipe layer that applies the operationally-proven patterns
 
 ```powershell
 # Run the full pipeline against every enabled source.
-retina-watch run --trigger=weekly
+glaucoma-watch run --trigger=weekly
 
 # Run a subset.
-retina-watch run --source-type=clinicaltrials_v2_api
-retina-watch run --source-id=bayer-congresspublications-hcp
+glaucoma-watch run --source-type=clinicaltrials_v2_api
+glaucoma-watch run --source-id=bayer-congresspublications-hcp
 
 # Operator queries.
-retina-watch show-runs --limit 10
-retina-watch show-source <source_id>
-retina-watch show-candidates --decision=new
+glaucoma-watch show-runs --limit 10
+glaucoma-watch show-source <source_id>
+glaucoma-watch show-candidates --decision=new
 
 # Health check (silent sources, latency drift, fetch errors).
-retina-watch health
+glaucoma-watch health
 
 # Refresh the Jekyll dashboard JSON.
-retina-watch export-audit
+glaucoma-watch export-audit
 ```
 
 ## 3. Dagster UI
@@ -107,7 +107,7 @@ The page DOM probably changed. Three checks in order:
 
 1. Open the URL in a real browser. Has the page restructured?
 2. Look at the latest snapshot file under `artifacts/watch/snapshots/<source_id>/`. Compare to the prior snapshot.
-3. Run a one-source diagnosis: `retina-watch run --source-id=<id> --log-level=DEBUG`.
+3. Run a one-source diagnosis: `glaucoma-watch run --source-id=<id> --log-level=DEBUG`.
 
 Most fixes are a new `link_selector` or `url_must_match` in
 `extractor_config`. Persistent fixes belong in `recipes.py`, not the YAML,
@@ -155,7 +155,7 @@ schedule state is persisted in the Dagster instance database under
 1. Add the company to `_data/company_profiles.json` and (if new programs)
    `_data/company_programs.json`. The manifest is the truth, the watchlist
    reads from it.
-2. Run `retina-watch bootstrap-watchlist`. Conservative entries appear in
+2. Run `glaucoma-watch bootstrap-watchlist`. Conservative entries appear in
    the YAML; CT.gov and PubMed sources are seeded per program.
 3. Discover the publication URL by hand. Open the company's IR / MedInfo
    site, find the page that lists posters/manuscripts, copy the URL.
@@ -163,7 +163,7 @@ schedule state is persisted in the Dagster instance database under
    in `scripts/watch/src/glaucoma_watch/recipes.py` (a few lines of Python).
    If it is plain HTML, just edit the YAML to set the right URL and
    `source_type: html_pdf_links`.
-5. Run a one-source dry-run: `retina-watch run --source-id=<id>`. Inspect
+5. Run a one-source dry-run: `glaucoma-watch run --source-id=<id>`. Inspect
    the snapshot. Iterate on `extractor_config` / `title_filter` until the
    link count looks right.
 6. Re-run `bootstrap-watchlist` so the recipe layer applies your changes
@@ -198,7 +198,7 @@ Every audit query joins on `run_id`. The interesting joins:
 * "Which fetch produced this published document?"
   `candidates -> snapshots -> fetch_events` (all by run_id and source_id).
 * "Which sources have been silent N runs in a row?"
-  `retina-watch health` or query `snapshots` directly.
+  `glaucoma-watch health` or query `snapshots` directly.
 * "What did we attempt last Monday morning?"
   `SELECT * FROM runs WHERE started_at > date('now','-7 days')` plus the
   Dagster Runs tab for the same window.

@@ -49,7 +49,7 @@ def init_sentry() -> None:
     try:
         import sentry_sdk
     except ImportError:
-        get_logger().warning("sentry_sdk_not_installed", hint="pip install retina-watch[sentry]")
+        get_logger().warning("sentry_sdk_not_installed", hint="pip install glaucoma-watch[sentry]")
         return
     sentry_sdk.init(
         dsn=dsn,
